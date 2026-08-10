@@ -42,7 +42,6 @@ jobs:
 
       - name: Generate content
         run: python3 scripts/sync_content.py
-        working-directory: .
 
       - name: Build
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
