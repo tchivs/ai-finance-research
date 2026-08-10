@@ -109,6 +109,12 @@ code, pre, .eyebrow, .side-index, .panel-kicker, .source-badge, .toc-title {
 .list-body strong { color: var(--navy); font-size: 14px; }
 .list-body small { overflow: hidden; color: var(--muted); font-size: 12px; line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; }
 .list-arrow { color: var(--teal); font-size: 18px; }
+.project-groups { display: grid; gap: 54px; max-width: 1000px; }
+.project-group { min-width: 0; }
+.project-group-header { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding-bottom: 13px; border-bottom: 1px solid var(--line); }
+.project-group-header h2 { margin: 6px 0 0; color: var(--navy); font-size: 23px; line-height: 1.25; }
+.project-group-count { flex: 0 0 auto; padding-bottom: 2px; color: var(--teal); font: 700 11px/1.4 "SFMono-Regular", monospace; }
+.project-group-description { max-width: 720px; margin: 12px 0 18px; color: var(--muted); font-size: 13px; }
 
 .breadcrumbs { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 26px; color: var(--muted); font-size: 11px; }
 .breadcrumbs a:hover { color: var(--teal); }
@@ -179,6 +185,7 @@ code, pre, .eyebrow, .side-index, .panel-kicker, .source-badge, .toc-title {
   .feature-panel { min-height: 190px; }
   .page-heading h1 { font-size: 32px; }
   .list-body small { white-space: normal; }
+  .project-group-header { align-items: start; flex-direction: column; gap: 5px; }
   .search-results { right: -12px; width: min(340px, calc(100vw - 32px)); }
   .site-footer { flex-wrap: wrap; padding: 17px 18px 23px; }
   .site-footer a { margin-left: 0; width: 100%; }

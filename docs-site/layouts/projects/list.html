@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <div class="page-heading">
+    <div class="eyebrow">PROJECT CATALOG</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="intro-copy">{{ . }}</div>{{ end }}
+  </div>
+
+  {{ $projects := where .Pages "Params.kind" "project" }}
+  <div class="project-groups">
+    {{ range $groupIndex, $group := .Site.Data.project_groups.groups }}
+      {{ $groupProjects := where $projects "Params.category" $group.slug }}
+      {{ if gt (len $groupProjects) 0 }}
+        <section class="project-group">
+          <header class="project-group-header">
+            <div>
+              <div class="eyebrow">研究主题 {{ printf "%02d" (add $groupIndex 1) }}</div>
+              <h2>{{ $group.title }}</h2>
+            </div>
+            <span class="project-group-count">{{ len $groupProjects }} 个项目</span>
+          </header>
+          <p class="project-group-description">{{ $group.description }}</p>
+          <div class="list-stack">
+            {{ range $groupProjects.ByTitle }}
+              <a class="list-item" href="{{ .RelPermalink }}">
+                <span class="list-number">{{ printf "%02d" .Weight }}</span>
+                <span class="list-body"><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+                <span class="list-arrow">→</span>
+              </a>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}

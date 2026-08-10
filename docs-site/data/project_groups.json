@@ -1,0 +1,123 @@
+{
+  "groups": [
+    {
+      "slug": "research-agents",
+      "title": "研究与 Agent 系统",
+      "description": "面向投研工作流、多 Agent 协作、研究终端和报告生成的应用项目。",
+      "projects": [
+        "uzi-skill",
+        "ai-berkshire",
+        "daily-stock-analysis",
+        "deepear",
+        "deepfund",
+        "tradingagents-family",
+        "tradingagents-ashare",
+        "ai-hedge-fund",
+        "jcp",
+        "panwatch",
+        "openashare",
+        "vibe-research",
+        "dojoagents",
+        "pa-agent"
+      ]
+    },
+    {
+      "slug": "quant-strategy-research",
+      "title": "量化、策略与研究自动化",
+      "description": "面向因子、策略、组合、回测、模型预测和研究实验自动化的项目。",
+      "projects": [
+        "vibe-trading",
+        "tickflow-stock-panel",
+        "quantdinger",
+        "vnpy",
+        "pyportfolioopt",
+        "lean",
+        "qlib",
+        "alphaagent",
+        "alphamaster",
+        "alpha-evolution-lab",
+        "alphaevo",
+        "evoalpha",
+        "quant-autoresearch",
+        "quantaalpha",
+        "rd-agent",
+        "joinquant-skill",
+        "quant-buddy-skill",
+        "financial-timeseries-foundation",
+        "kronos"
+      ]
+    },
+    {
+      "slug": "data-interfaces-tools",
+      "title": "数据、接口与工具层",
+      "description": "面向行情采集、数据源适配、MCP、CLI、网关和数据质量检测的项目。",
+      "projects": [
+        "daily-stock-data",
+        "a-stock-data",
+        "agent-reach",
+        "wudao-mcp",
+        "agentic-china-data-tooling",
+        "tdx-market-data-clients",
+        "snowball-cli",
+        "hhxg-market",
+        "privora-python-examples",
+        "financial-api"
+      ]
+    },
+    {
+      "slug": "polymarket-prediction-markets",
+      "title": "Polymarket 与预测市场链路",
+      "description": "覆盖 Polymarket 的 SDK、CLOB、实时数据、链上索引、结算和做市组件。",
+      "projects": [
+        "polymarket-ts-sdk",
+        "polymarket-py-sdk",
+        "polymarket-clob-client-v2",
+        "polymarket-py-clob-client-v2",
+        "polymarket-real-time-data-client",
+        "polymarket-cli",
+        "polymarket-agent-skills",
+        "polymarket-subgraph",
+        "polymarket-resolution-subgraph",
+        "polymarket-go-market-events",
+        "polymarket-ctf-exchange-v2",
+        "polymarket-uma-ctf-adapter",
+        "polymarket-neg-risk-ctf-adapter",
+        "polymarket-poly-market-maker"
+      ]
+    },
+    {
+      "slug": "runtime-data-orchestration",
+      "title": "量化运行时、数据平台与编排",
+      "description": "面向事件驱动交易、跨市场连接器、数据资产、缓存和工作流编排的项目。",
+      "projects": [
+        "nautilus-trader",
+        "vectorbt",
+        "hummingbot",
+        "ccxt",
+        "openbb",
+        "akshare",
+        "dagster",
+        "temporal",
+        "finceptterminal"
+      ]
+    },
+    {
+      "slug": "lightweight-skills-monitoring",
+      "title": "轻量技能、监控与内容系统",
+      "description": "面向盯盘、提醒、研究技能、内容沉淀和结果校准的轻量项目。",
+      "projects": [
+        "trade-skills",
+        "a-share-watch-butler",
+        "magpie",
+        "awesome-finance-skills",
+        "x2t"
+      ]
+    },
+    {
+      "slug": "uncategorized",
+      "title": "待分类项目",
+      "description": "新增项目尚未归入现有研究主题，后续应补充分类和阅读入口。",
+      "projects": []
+    }
+  ]
+}
