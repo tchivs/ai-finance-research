@@ -1,7 +1,18 @@
 # Financial-API 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HiThink-Tech/Financial-API.git
+> 分析基线：
+> - `Financial-API`：commit `f8cdea908469b1b3b8bfb88dbb4d4a3959b1905c`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Financial-API`
+<!-- source-sync:end -->
+
+
 > 同花顺官方 A 股数据接入层 · REST/MCP/CLI/Python/DuckDB 一套认证与多端路由
-> 源码: `/root/source/docs/aaa/src/Financial-API/`
+> 源码: `src/Financial-API/`
 > 原始仓库: <https://github.com/HiThink-Tech/Financial-API>
 
 ## 1. 为什么 Financial-API 重要

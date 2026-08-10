@@ -1,7 +1,18 @@
 # wudao-mcp 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/jcdreamjc/wudao-mcp.git
+> 分析基线：
+> - `wudao-mcp`：commit `6874ef9b2f0be95ec6db1e26b1fefc28615ea0cd`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/wudao-mcp`
+<!-- source-sync:end -->
+
+
 > A 股数据 MCP 产品化 · Agent 工具发现 · workflow/atomic 双层工具面
-> 源码: `/root/source/tmp/wudao-mcp/`
+> 源码: `src/wudao-mcp/`
 > 原始仓库: <https://github.com/jcdreamjc/wudao-mcp>
 
 ---

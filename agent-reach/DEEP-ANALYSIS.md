@@ -1,7 +1,50 @@
 # Agent-Reach 终极深度逆向分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/Panniantong/Agent-Reach
+> 分析基线：
+> - `Agent-Reach`：commit `1221ecd0c3e0502ee37406f03543bedf7503f2c7`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Agent-Reach`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `Agent-Reach`：`b4d52c46c911` → `1221ecd0c3e0`
+
+提交摘要：
+- 1221ecd Merge pull request #578 from Panniantong/codex/finish-open-prs-20260806
+- 101276d test(windows): inject shell command doubles portably
+- e6c066d test(windows): decode Git Bash output as UTF-8
+- 8a4785e test(ci): locate real Bash on Windows
+- 00e782a test(ci): prefer Git Bash on Windows
+- 3ab50bc test(ci): run Windows shell checks with Git Bash
+- e0fc5b7 test(ci): add Windows suite coverage
+- 6e92782 docs: quote pip extras install examples
+受影响路径：
+- `M	.github/workflows/pytest.yml`
+- `A	.openteams/specs/2026-08-04-readme-partner-section-design.html`
+- `M	README.md`
+- `M	agent_reach/channels/_opencli_site.py`
+- `M	agent_reach/channels/bilibili.py`
+- `M	agent_reach/channels/linkedin.py`
+- `M	agent_reach/channels/reddit.py`
+- `M	agent_reach/channels/twitter.py`
+- `M	agent_reach/channels/v2ex.py`
+- `M	agent_reach/channels/web.py`
+- `M	agent_reach/channels/xiaohongshu.py`
+- `M	agent_reach/channels/xiaoyuzhou.py`
+- 其余 51 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 15 平台渠道 · Channel 抽象 · Doctor 诊断 · Glue Layer 哲学
-> 源码: `/root/source/tmp/Agent-Reach/`
+> 源码: `src/Agent-Reach/`
 > 原始仓库: <https://github.com/Panniantong/Agent-Reach>
 > 版本: v1.5.0 · 8396 行 Python · MIT
 

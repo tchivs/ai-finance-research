@@ -1,7 +1,18 @@
 # AlphaEvo 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/ZhuLinsen/alphaevo.git
+> 分析基线：
+> - `alphaevo`：commit `712e60b3a79fa3835ac725e91e4f5b2c5811f652`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/alphaevo`
+<!-- source-sync:end -->
+
+
 > 可追溯的量化策略/因子进化研究系统 · YAML DSL、LLM 反思、统计验证与历史回测
-> 源码: `/root/source/docs/aaa/src/alphaevo/`
+> 源码: `src/alphaevo/`
 > 原始仓库: <https://github.com/ZhuLinsen/alphaevo>
 
 ## 1. 为什么 AlphaEvo 重要

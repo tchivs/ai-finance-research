@@ -1,7 +1,18 @@
 # FinceptTerminal 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/Fincept-Corporation/FinceptTerminal.git
+> 分析基线：
+> - `FinceptTerminal`：commit `823f63848084f3869e4c9a487663f41f44d55989`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/FinceptTerminal`
+<!-- source-sync:end -->
+
+
 > Fincept-Corporation · 原生桌面金融工作站 · C++20 / Qt6 / Python / SQLite / HTTP-WebSocket
-> 源码: `/root/source/docs/aaa/src/FinceptTerminal/`
+> 源码: `src/FinceptTerminal/`
 > 原始仓库: <https://github.com/Fincept-Corporation/FinceptTerminal>
 
 ## 1. 一句话定位

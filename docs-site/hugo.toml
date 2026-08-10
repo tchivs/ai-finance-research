@@ -1,0 +1,43 @@
+baseURL = "/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "AI + 金融开源项目研究库"
+contentDir = "content"
+publishDir = "public"
+enableRobotsTXT = true
+enableGitInfo = false
+cleanDestinationDir = true
+
+[params]
+  description = "面向多市场量化工作台、统一数据平台和 Agent 系统的开源项目研究库。"
+  repository = "https://github.com/tchivs/ai-finance-research"
+  sourceDate = "2026-08-10"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[outputs]
+  home = ["HTML", "JSON"]
+
+[security]
+  [security.funcs]
+    getenv = ["^HUGO_"]
+
+[menu]
+  [[menu.main]]
+    name = "研究文档"
+    url = "/library/"
+    weight = 10
+  [[menu.main]]
+    name = "项目目录"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    name = "量化工作台 PRD"
+    url = "/library/quant-workbench-prd/"
+    weight = 30

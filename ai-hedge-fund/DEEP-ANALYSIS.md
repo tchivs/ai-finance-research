@@ -1,7 +1,50 @@
 # ai-hedge-fund 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/virattt/ai-hedge-fund.git
+> 分析基线：
+> - `ai-hedge-fund`：commit `eff8a7320fcf0b473b135690fa1a5b0d9b022a83`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/ai-hedge-fund`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `ai-hedge-fund`：`9557e64273e2` → `eff8a7320fcf`
+
+提交摘要：
+- eff8a73 Bump version to 2.2.0
+- 75b89a1 Rename package to aihf
+- 69e5946 Clean up backtester
+- 1524bb1 Untrack scripts/release.sh; release tooling is local-only
+- 1d83ae0 Update the command
+- e026e5f Package for PyPI as hedge-fund
+- a7a99e5 Make 2.0.0 the default
+- 6c41ae8 Add thinking
+受影响路径：
+- `D	.dockerignore`
+- `M	.env.example`
+- `M	.gitignore`
+- `M	README.md`
+- `M	ROADMAP.md`
+- `M	VISION.md`
+- `D	app/README.md`
+- `D	app/backend/README.md`
+- `D	app/backend/__init__.py`
+- `D	app/backend/alembic.ini`
+- `D	app/backend/alembic/README`
+- `D	app/backend/alembic/env.py`
+- 其余 341 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 投资流派 Agent · LangGraph 并行 analyst · 组合约束 · 波动/相关性风控 · 历史回放
-> 源码: `/root/source/tmp/ai-hedge-fund/`
+> 源码: `src/ai-hedge-fund/`
 > 原始仓库: <https://github.com/virattt/ai-hedge-fund>
 
 ## 1. 系统定位

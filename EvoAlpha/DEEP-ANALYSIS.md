@@ -1,7 +1,18 @@
 # EvoAlpha 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/AAAAndrews/EvoAlpha.git
+> 分析基线：
+> - `EvoAlpha`：commit `c9ecc107bc000f0de46a9de018682f372f54042a`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/EvoAlpha`
+<!-- source-sync:end -->
+
+
 > LLM 驱动的 Qlib 表达式因子进化器 · 变异/交叉搜索 · 外部回测验证 · MongoDB 溯源
-> 源码: `/root/source/docs/aaa/src/EvoAlpha/`
+> 源码: `src/EvoAlpha/`
 > 原始仓库: <https://github.com/AAAAndrews/EvoAlpha>
 
 ## 1. 为什么 EvoAlpha 重要

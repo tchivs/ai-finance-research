@@ -1,7 +1,36 @@
 # a-stock-data 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/simonlin1212/a-stock-data.git
+> 分析基线：
+> - `a-stock-data`：commit `3a3149dedbe30cda58b5c94387039d7e707cedcd`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/a-stock-data`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `a-stock-data`：`281fc69a0b73` → `3a3149dedbe3`
+
+提交摘要：
+- 3a3149d fix: 龙虎榜在回看窗口无上榜记录时抛 UnboundLocalError (#45)
+- 715b9f4 fix: 研报层静默失败 + 北交所920号段迁移；feat: 重点监控池/日内异动 (v3.6.0, #15)
+受影响路径：
+- `A	.gitignore`
+- `M	CHANGELOG.md`
+- `M	README.md`
+- `M	README_en.md`
+- `M	SKILL.md`
+<!-- source-sync:changes:end -->
+
+
 > A 股公开数据端点目录 · 数据源优先级 · 东财防封 · Agent Skill 化数据底座
-> 源码: `/root/source/tmp/a-stock-data/`
+> 源码: `src/a-stock-data/`
 > 原始仓库: <https://github.com/simonlin1212/a-stock-data>
 
 ---

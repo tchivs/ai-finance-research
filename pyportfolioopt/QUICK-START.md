@@ -1,7 +1,17 @@
 # PyPortfolioOpt 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/PyPortfolio/PyPortfolioOpt.git
+> 分析基线：
+> - `PyPortfolioOpt`：commit `a6638d2e06dae6f444fd022cfd4b3c528902a85b`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/PyPortfolioOpt`
+<!-- source-sync:end -->
+
+
 > 原始仓库: <https://github.com/PyPortfolio/PyPortfolioOpt>
-> 分析基线：`PyPortfolio/PyPortfolioOpt` commit `a6638d2e06dae6f444fd022cfd4b3c528902a85b`（2026-07-07），版本 1.6.0，MIT，Python >= 3.10 且 < 3.15。
 
 ## 一句话定位
 

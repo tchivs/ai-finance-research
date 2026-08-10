@@ -1,7 +1,18 @@
 # x2t 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/actionow-ai/x2t.git
+> 分析基线：
+> - `x2t`：commit `f90487430f8d93fa245f81ac7b37a2014301e3b5`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/x2t`
+<!-- source-sync:end -->
+
+
 > 财经博主观点追踪 · AI 立场标注 · 信源战绩结算 · Flip Radar · Wilson/FDR 统计校正
-> 源码: `/root/source/tmp/x2t/`
+> 源码: `src/x2t/`
 > 原始仓库: <https://github.com/actionow-ai/x2t>
 
 ---

@@ -1,7 +1,18 @@
 # Privora Python Examples 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/GuangfuWu/privora-python-examples.git
+> 分析基线：
+> - `privora-python-examples`：commit `a36f28c1f2b01f1912972b70ac5beea715f555d2`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/privora-python-examples`
+<!-- source-sync:end -->
+
+
 > agent skill gateway examples · bearer token scopes · dataasset access · encrypted portfolio path
-> 源码: `/root/source/tmp/privora-python-examples/`
+> 源码: `src/privora-python-examples/`
 > 原始仓库: <https://github.com/GuangfuWu/privora-python-examples>
 
 ## 1. 架构定位

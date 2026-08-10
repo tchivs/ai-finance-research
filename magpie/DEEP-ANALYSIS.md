@@ -1,7 +1,18 @@
 # magpie 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/SymbolStar/magpie.git
+> 分析基线：
+> - `magpie`：commit `177d8bb089c88448760afee69d8d64db8eb8d436`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/magpie`
+<!-- source-sync:end -->
+
+
 > local daemon · Node HTTP API · Python data worker · SQLite state · alert rule engine · digest scheduler
-> 源码: `/root/source/tmp/magpie/`
+> 源码: `src/magpie/`
 > 原始仓库: <https://github.com/SymbolStar/magpie>
 
 ## 1. 架构定位

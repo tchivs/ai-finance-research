@@ -1,7 +1,18 @@
 # Awesome Finance Skills 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/RKiding/Awesome-finance-skills.git
+> 分析基线：
+> - `Awesome-finance-skills`：commit `853f09b4d0baae747759ed31e21ed5c5b2316a5f`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Awesome-finance-skills`
+<!-- source-sync:end -->
+
+
 > AlphaEar 金融技能集合 · 新闻/股票/情绪/预测/搜索/研报/可视化 · Agent 可插拔能力包
-> 源码: `/root/source/tmp/Awesome-finance-skills/`
+> 源码: `src/Awesome-finance-skills/`
 > 原始仓库: <https://github.com/RKiding/Awesome-finance-skills>
 
 ## 1. 一句话定位

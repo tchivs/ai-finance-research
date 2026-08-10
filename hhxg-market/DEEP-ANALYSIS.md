@@ -1,7 +1,43 @@
 # hhxg-market 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/Niceck/hhxg-top-hhxg-python.git
+> 分析基线：
+> - `hhxg-top-hhxg-python`：commit `962fb63dd58c852bda298ccfd0bacb7021098eac`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/hhxg-top-hhxg-python`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `hhxg-top-hhxg-python`：`381d2c3f54af` → `962fb63dd58c`
+
+提交摘要：
+- 962fb63 v1.2.0: 免费 skill 4 → 9 数据模块
+受影响路径：
+- `M	.github/workflows/lint.yml`
+- `A	CHANGELOG.md`
+- `M	README.md`
+- `M	SKILL.md`
+- `M	references/data-schema.md`
+- `M	scripts/_common.py`
+- `A	scripts/dongmi.py`
+- `M	scripts/fetch_snapshot.py`
+- `M	scripts/news.py`
+- `A	scripts/northbound.py`
+- `A	scripts/resonance.py`
+- `A	scripts/strategy.py`
+- 其余 1 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > hhxg.top readonly market data skill · static JSON · cache fallback · zero dependency Python scripts
-> 源码: `/root/source/tmp/hhxg-top-hhxg-python/`
+> 源码: `src/hhxg-top-hhxg-python/`
 > 原始仓库: <https://github.com/Niceck/hhxg-top-hhxg-python>
 
 ## 1. 架构定位

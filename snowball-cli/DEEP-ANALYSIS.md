@@ -1,7 +1,18 @@
 # snowball-cli 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/baixianger/snowball-cli.git
+> 分析基线：
+> - `snowball-cli`：commit `f3c0a641c835c5f7425afa61e1f5fc1a11b463b4`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/snowball-cli`
+<!-- source-sync:end -->
+
+
 > Xueqiu/Danjuan API wrapper · JSON CLI · cookie auth · finance/social/fund data for agents
-> 源码: `/root/source/tmp/snowball-cli/`
+> 源码: `src/snowball-cli/`
 > 原始仓库: <https://github.com/baixianger/snowball-cli>
 
 ## 1. 架构定位

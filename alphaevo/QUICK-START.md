@@ -1,7 +1,18 @@
 # AlphaEvo 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/ZhuLinsen/alphaevo.git
+> 分析基线：
+> - `alphaevo`：commit `712e60b3a79fa3835ac725e91e4f5b2c5811f652`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/alphaevo`
+<!-- source-sync:end -->
+
+
 > ZhuLinsen · 可追溯的量化策略与因子进化研究系统 · Python / Typer / Pydantic / pandas / SQLite / 可选 LiteLLM
-> 源码: `/root/source/docs/aaa/src/alphaevo/`
+> 源码: `src/alphaevo/`
 > 原始仓库: <https://github.com/ZhuLinsen/alphaevo>
 
 ## 1. 一句话定位

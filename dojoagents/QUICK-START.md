@@ -1,7 +1,17 @@
 # DojoAgents 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/Alpha-Dojo/DojoAgents.git
+> 分析基线：
+> - `DojoAgents`：commit `0d3389e6f3739c0b0abc24869fa55a2e7acd19ef`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/DojoAgents`
+<!-- source-sync:end -->
+
+
 > 原始仓库: <https://github.com/Alpha-Dojo/DojoAgents>
-> 分析基线：`Alpha-Dojo/DojoAgents` 本地浅克隆，commit `d69d469c6b7511a269f1e57909ffa54540724616`（2026-07-10）。上游许可证为 Apache-2.0；Python 要求 >= 3.11。
 
 ## 一句话定位
 

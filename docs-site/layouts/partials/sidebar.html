@@ -1,0 +1,34 @@
+<aside class="sidebar">
+  <div class="sidebar-label">KNOWLEDGE MAP</div>
+  <nav class="side-nav" aria-label="文档导航">
+    <a href="{{ .Site.Home.RelPermalink }}" class="side-link {{ if .IsHome }}is-active{{ end }}">
+      <span class="side-index">00</span>
+      <span>研究库首页</span>
+    </a>
+    <a href="{{ "library/" | relURL }}" class="side-link {{ if eq .Section "library" }}is-active{{ end }}">
+      <span class="side-index">DOC</span>
+      <span>研究文档</span>
+    </a>
+    <a href="{{ "projects/" | relURL }}" class="side-link {{ if eq .Section "projects" }}is-active{{ end }}">
+      <span class="side-index">SRC</span>
+      <span>项目目录</span>
+    </a>
+  </nav>
+
+  {{ $library := .Site.GetPage "/library" }}
+  {{ if $library }}
+    <div class="sidebar-section">
+      <div class="sidebar-label">CORE DOCS</div>
+      <div class="side-list">
+        {{ range first 8 $library.Pages.ByWeight }}
+          <a href="{{ .RelPermalink }}" class="side-sub-link">{{ .Title }}</a>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+
+  <div class="sidebar-note">
+    <span class="status-dot"></span>
+    <span>内容绑定源码 commit 与分析日期</span>
+  </div>
+</aside>

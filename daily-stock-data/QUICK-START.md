@@ -1,8 +1,18 @@
 # daily_stock_data 快速概览
 
-> 源码：`/root/source/tmp/daily_stock_data/`
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/bzcsk2/daily_stock_data
+> 分析基线：
+> - `daily_stock_data`：commit `e0efc471e5350e08c58018cb49ba0e215cf1fb92`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/daily_stock_data`
+<!-- source-sync:end -->
+
+
+> 源码：`src/daily_stock_data/`
 > 原始仓库: <https://github.com/bzcsk2/daily_stock_data>
-> 分析基线：`e0efc471e5350e08c58018cb49ba0e215cf1fb92`（2026-06-25）
 > 源码复核：2026-07-10，详见 [首批源码落地验证](../19-首批源码落地验证.md#3-daily_stock_data)
 
 ## 一句话定位

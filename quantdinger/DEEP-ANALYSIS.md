@@ -1,9 +1,51 @@
 # QuantDinger 深度代码分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/brokermr810/QuantDinger.git
+> 分析基线：
+> - `QuantDinger`：commit `e64e1c227bf3174e441a42143620179b286387e1`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/QuantDinger`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `QuantDinger`：`23b1aad65c87` → `e64e1c227bf3`
+
+提交摘要：
+- e64e1c2 fix live order safety and refresh strategy templates
+- f53eb09 fix live order reconciliation and runtime pricing
+- 75f5b6e Align indicator contract with Pine capabilities
+- 07767f4 fix: harden position coexistence safeguards
+- e820a74 fix: restore backend CI guardrails
+- ae2d6d8 fix: protect user positions during strategy execution
+- f5804c6 Bump the python-runtime group in /backend_api_python with 35 updates (#188)
+- 8fafc74 Bump github/codeql-action from 4 to 4.37.3 (#187)
+受影响路径：
+- `M	.github/workflows/basic-ci.yml`
+- `M	.github/workflows/docker-publish.yml`
+- `A	.github/workflows/mcp-ci.yml`
+- `M	.github/workflows/openapi-ci.yml`
+- `M	.github/workflows/security-ci.yml`
+- `M	README.md`
+- `M	backend_api_python/README.md`
+- `M	backend_api_python/app/data_providers/__init__.py`
+- `M	backend_api_python/app/data_sources/crypto.py`
+- `M	backend_api_python/app/data_sources/factory.py`
+- `M	backend_api_python/app/observability/http.py`
+- `M	backend_api_python/app/routes/agent_v1/__init__.py`
+- 其余 183 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 开源 AI Trading OS · Human API / Agent Gateway 双入口 · MCP 薄封装 · 指标/策略沙箱 · 回测/实验/纸面/实盘执行闭环
-> 源码: `/root/source/tmp/QuantDinger/`
+> 源码: `src/QuantDinger/`
 > 原始仓库: <https://github.com/brokermr810/QuantDinger>
-> 分析基线：`fc33395cbbf162e0145372341740b9ae4bac3f6a`（2026-07-03）
 > 源码复核：2026-07-10，详见 [首批源码落地验证](../19-首批源码落地验证.md#5-quantdinger)
 
 ---

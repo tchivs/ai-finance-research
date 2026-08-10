@@ -1,7 +1,18 @@
 # DeepFund 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HKUSTDial/DeepFund.git
+> 分析基线：
+> - `DeepFund`：commit `e31f1c2eae845b8627fe65621ba4febaf55c2385`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/DeepFund`
+<!-- source-sync:end -->
+
+
 > Live Arena 视角 · 多 Analyst 投资决策 · 组合状态数据库 · 时间顺序回放防穿越
-> 源码: `/root/source/tmp/DeepFund/`
+> 源码: `src/DeepFund/`
 > 原始仓库: <https://github.com/HKUSTDial/DeepFund>
 
 ---

@@ -1,7 +1,50 @@
 # Vibe-Research 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/simonlin1212/Vibe-Research.git
+> 分析基线：
+> - `Vibe-Research`：commit `d8c80d4ac60e43c1f096c0c486355b19800f16d7`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Vibe-Research`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `Vibe-Research`：`37a23f8c96da` → `d8c80d4ac60e`
+
+提交摘要：
+- d8c80d4 fix(chat): 支持 智谱 baseUrl , baseURL 白名单加入 /v4，避免 /v4 结尾被误补成 /v4/v1 (#22)
+- 3f060a3 fix: 畸形响应校验到底 + turnover 补回 float_cap（codex 第四轮）
+- 8864304 fix: 搜索端点必须校验响应结构才收手（codex 复审）
+- 9489f9d fix: 三个用户报告的 bug + 版本号治理 (#26 #27 #28)
+- be99807 fix: 版本读取失败的警告改走 stderr，不污染 MCP 协议（codex 复审）
+- 3ec179a fix: MCP serverInfo 也走同一个版本来源（codex 审计补漏，#20）
+- 50346be fix: 版本号从 package.json 单一来源读取，不再三处硬编码 (#20)
+- 3eae02d Merge v0.3.0: Ask AI Markdown 渲染 + 对话持久化 + 港股现金流量表
+受影响路径：
+- `A	CHANGELOG.md`
+- `M	README.md`
+- `M	README_en.md`
+- `M	a-stock-data/CHANGELOG.md`
+- `M	a-stock-data/README.md`
+- `M	a-stock-data/README_en.md`
+- `M	a-stock-data/SKILL.md`
+- `M	backend/README.md`
+- `M	backend/app.py`
+- `M	backend/chat.py`
+- `M	backend/gstock.py`
+- `M	backend/mcp_server.py`
+- 其余 17 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 本地自托管 A 股投研看板 · FastAPI / NDJSON chat / MCP / portfolio cache
-> 源码: `/root/source/tmp/Vibe-Research/`
+> 源码: `src/Vibe-Research/`
 > 原始仓库: <https://github.com/simonlin1212/Vibe-Research>
 
 ## 1. 一句话定位

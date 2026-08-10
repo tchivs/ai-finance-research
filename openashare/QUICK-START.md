@@ -1,7 +1,18 @@
 # OpenAshare 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/ZhiweiChen-coder/OpenAshare.git
+> 分析基线：
+> - `OpenAshare`：commit `bcdaabdaf936cd90ea556651172936d168d89127`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/OpenAshare`
+<!-- source-sync:end -->
+
+
 > 本地优先 A 股 AI 研究工作台 · Next.js + FastAPI · SQLite 会话记忆 · 多市场搜索 · SSE 进度流
-> 源码: `/root/source/tmp/OpenAshare/`
+> 源码: `src/OpenAshare/`
 > 原始仓库: <https://github.com/ZhiweiChen-coder/OpenAshare>
 
 ---

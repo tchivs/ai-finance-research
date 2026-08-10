@@ -1,7 +1,18 @@
 # joinquant-skill 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/gaaiyun/joinquant-skill.git
+> 分析基线：
+> - `joinquant-skill`：commit `2a0b794ef85c55cdb646dc84bfd7ce58f8b64434`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/joinquant-skill`
+<!-- source-sync:end -->
+
+
 > 聚宽策略生成与审计 Skill · API 知识库 · 模板 · AST lint · 因子库 · 研报抽取 · MCP server
-> 源码: `/root/source/tmp/joinquant-skill/`
+> 源码: `src/joinquant-skill/`
 > 原始仓库: <https://github.com/gaaiyun/joinquant-skill>
 
 ## 1. 一句话定位

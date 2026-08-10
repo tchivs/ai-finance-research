@@ -1,7 +1,17 @@
 # DojoAgents 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/Alpha-Dojo/DojoAgents.git
+> 分析基线：
+> - `DojoAgents`：commit `0d3389e6f3739c0b0abc24869fa55a2e7acd19ef`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/DojoAgents`
+<!-- source-sync:end -->
+
+
 > 原始仓库: <https://github.com/Alpha-Dojo/DojoAgents>
-> 分析基线：`Alpha-Dojo/DojoAgents` commit `d69d469c6b7511a269f1e57909ffa54540724616`，本地源码路径 `/root/source/tmp/DojoAgents`。本文是静态源码核对，不代表已连接真实 LLM、数据源或聊天平台的端到端验证。
 
 ## 1. 架构结论
 

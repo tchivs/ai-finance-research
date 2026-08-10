@@ -1,7 +1,17 @@
 # PA_Agent 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/rosemarycox5334-debug/PA_Agent.git
+> 分析基线：
+> - `PA_Agent`：commit `b1912e905800509e8f9cd50fb8589f4ef86ce21f`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/PA_Agent`
+<!-- source-sync:end -->
+
+
 > 原始仓库: <https://github.com/rosemarycox5334-debug/PA_Agent>
-> 分析基线：`rosemarycox5334-debug/PA_Agent` commit `b1912e905800509e8f9cd50fb8589f4ef86ce21f`（2026-07-16），AGPL-3.0-or-later，Python >= 3.11。分析时上游工作树已有未提交的规划/覆盖文档；本文只依据固定 HEAD 的静态源码，不修改上游文件，也未运行测试、连接 LLM、行情源或执行工作区。
 
 ## 一句话定位
 

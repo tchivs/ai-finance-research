@@ -1,7 +1,39 @@
 # RD-Agent 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/microsoft/RD-Agent.git
+> 分析基线：
+> - `RD-Agent`：commit `6762f84f9bc0f5c6486c50a00e128a57ac6c3683`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/RD-Agent`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `RD-Agent`：`4f9ecb005881` → `6762f84f9bc0`
+
+提交摘要：
+- 6762f84 docs: add Agent² RL-Bench preprint and project page (#1447)
+- 1deb2e0 fix(ci): upgrade Node.js to 22 for commitlint compatibility (#1444)
+- 400abb0 ci: stabilize CI toolchain (#1445)
+受影响路径：
+- `M	.github/workflows/ci.yml`
+- `M	.github/workflows/pr.yml`
+- `M	README.md`
+- `M	pyproject.toml`
+- `M	rdagent/scenarios/rl/autorl_bench/README.md`
+- `M	requirements.txt`
+- `M	requirements/lint.txt`
+<!-- source-sync:changes:end -->
+
+
 > Microsoft R&D-Agent · 自动化研发循环 · Quant 因子/模型演化 · Hypothesis -> Experiment -> Code -> Run -> Feedback
-> 源码: `/root/source/tmp/RD-Agent/`
+> 源码: `src/RD-Agent/`
 > 原始仓库: <https://github.com/microsoft/RD-Agent>
 
 ---

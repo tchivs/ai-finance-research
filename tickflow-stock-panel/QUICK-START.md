@@ -1,9 +1,51 @@
 # tickflow-stock-panel 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/shy3130/tickflow-stock-panel.git
+> 分析基线：
+> - `tickflow-stock-panel`：commit `99bdec875d4bbf5c30ddc43534b81ada0f3b0f6b`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/tickflow-stock-panel`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `tickflow-stock-panel`：`d29ceed73d1e` → `99bdec875d4b`
+
+提交摘要：
+- 99bdec8 Merge pull request #170 from shy3130/fix/regime-calendar-weekday-align
+- 8b83f9e fix(regime): 修复日历热力图交易日错位到周末列
+- c278dd3 Merge pull request #164 from shy3130/fix/regime-trend-polish
+- bc2b1ae fix(regime): 趋势图优化 — 线宽/阈值线补全/左右轴交换/涨停默认隐藏
+- 8735a36 Merge pull request #163 from shy3130/feat/regime-page-enhance
+- 92e5db2 fix(regime): 趋势图阈值线醒目化 + 标签移到图表右侧外侧
+- 6646d0a feat(regime): 市场环境页完善 — 顶部改造+日历热力图+趋势图修复
+- 201d1b3 Merge pull request #162 from shy3130/feat/industry-rotation-and-ext-number-format
+受影响路径：
+- `M	.gitignore`
+- `M	AGENTS.md`
+- `A	CONTRIBUTING.md`
+- `M	VERSION`
+- `M	backend/app/__init__.py`
+- `M	backend/app/api/backtest.py`
+- `M	backend/app/api/kline.py`
+- `M	backend/app/api/monitor_rules.py`
+- `A	backend/app/api/regime.py`
+- `M	backend/app/api/rps.py`
+- `M	backend/app/api/screener.py`
+- `M	backend/app/api/settings.py`
+- 其余 105 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 自托管 A 股「选股 + 监控 + 回测 + 复盘」工作台 · FastAPI + React + Polars/DuckDB/Parquet · TickFlow 能力探测与扩展数据同台分析
-> 源码: `/root/source/tmp/tickflow-stock-panel/`
+> 源码: `src/tickflow-stock-panel/`
 > 原始仓库: <https://github.com/shy3130/tickflow-stock-panel>
-> 分析基线：`3656fedc628f84b3f14e41d17f9e5529bd9dc800`（2026-07-06）
 > 源码复核：2026-07-10，详见 [首批源码落地验证](../19-首批源码落地验证.md#4-tickflow-stock-panel)
 
 ---

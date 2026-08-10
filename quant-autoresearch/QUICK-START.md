@@ -1,7 +1,18 @@
 # Quant Autoresearch 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/yllvar/Quant-Autoresearch.git
+> 分析基线：
+> - `Quant-Autoresearch`：commit `16636a87596c32600fdd088bb9ee5dacd491e1b2`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Quant-Autoresearch`
+<!-- source-sync:end -->
+
+
 > OPENDEV 风格量化策略自进化 · ReAct loop / RestrictedPython / ACC / Playbook
-> 源码: `/root/source/tmp/Quant-Autoresearch/`
+> 源码: `src/Quant-Autoresearch/`
 > 原始仓库: <https://github.com/yllvar/Quant-Autoresearch>
 
 ## 1. 一句话定位

@@ -1,7 +1,50 @@
 # daily_stock_analysis 终极深度逆向分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/ZhuLinsen/daily_stock_analysis
+> 分析基线：
+> - `daily_stock_analysis`：commit `396d43a4c76ffa940e2b9aea7bbe8686343c694a`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/daily_stock_analysis`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `daily_stock_analysis`：`905c339d80ad` → `396d43a4c76f`
+
+提交摘要：
+- 396d43a docs: prepare v3.30.0 release (#2180)
+- 071c5aa fix: stabilize Xiaohongshu share image caption (#2179)
+- 40b8c6c fix: 修复首页移动端个股栏触摸滚动 (#2171)
+- 5698068 fix: split level-one headings without recursion (#2176)
+- 46d5bf3 fix: 恢复桌面端报告分享图 (#2169)
+- ed848da feat: persist Agent Chat Skill selection by session (#2160)
+- ae19329 fix: stabilize watchlist details and workspace state (#2126)
+- 03dd26a ci: shard backend tests across runners (#2165)
+受影响路径：
+- `M	.env.example`
+- `A	.github/ci-test-durations.json`
+- `M	.github/requirements-ci.txt`
+- `M	.github/workflows/00-daily-analysis.yml`
+- `M	.github/workflows/ci.yml`
+- `M	.github/workflows/docker-publish.yml`
+- `M	.gitignore`
+- `M	README.md`
+- `A	THIRD_PARTY_NOTICES.md`
+- `M	api/deps.py`
+- `M	api/v1/endpoints/__init__.py`
+- `M	api/v1/endpoints/agent.py`
+- 其余 229 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 17 数据源联邦 · Web+Desktop+Bot 三端 · 10 CI workflow · 最详细 AGENTS.md
-> 源码: `/root/source/tmp/daily_stock_analysis/`
+> 源码: `src/daily_stock_analysis/`
 > 原始仓库: <https://github.com/ZhuLinsen/daily_stock_analysis>
 
 ---

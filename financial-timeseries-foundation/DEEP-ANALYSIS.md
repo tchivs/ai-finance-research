@@ -1,7 +1,18 @@
 # Financial Time-Series Foundation Models 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/vincent05r/FinCast-fts.git
+> 分析基线：
+> - `FinCast-fts`：commit `488b19d1d85fa2b3d4b93469530cefdcf1cc97a4`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/FinCast-fts`
+<!-- source-sync:end -->
+
+
 > Kronos 与 FinCast 对比 · 离散 K 线语言建模 · Patch MoE 预测 · 量化系统接入边界
-> 源码: `/root/source/tmp/Kronos/`, `/root/source/tmp/FinCast-fts/`
+> 源码: `src/Kronos/`, `src/FinCast-fts/`
 > 原始仓库: [Kronos](https://github.com/shiyu-coder/Kronos) · [FinCast-fts](https://github.com/vincent05r/FinCast-fts)
 
 ---

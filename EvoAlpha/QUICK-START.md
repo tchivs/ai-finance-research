@@ -1,7 +1,18 @@
 # EvoAlpha 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/AAAAndrews/EvoAlpha.git
+> 分析基线：
+> - `EvoAlpha`：commit `c9ecc107bc000f0de46a9de018682f372f54042a`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/EvoAlpha`
+<!-- source-sync:end -->
+
+
 > AAAAndrews · Qlib 因子表达式的多角色 LLM 搜索与验证闭环 · Python / LangChain / MongoDB / REST API
-> 源码: `/root/source/docs/aaa/src/EvoAlpha/`
+> 源码: `src/EvoAlpha/`
 > 原始仓库: <https://github.com/AAAAndrews/EvoAlpha>
 
 ## 1. 一句话定位

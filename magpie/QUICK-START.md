@@ -1,7 +1,18 @@
 # magpie 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/SymbolStar/magpie.git
+> 分析基线：
+> - `magpie`：commit `177d8bb089c88448760afee69d8d64db8eb8d436`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/magpie`
+<!-- source-sync:end -->
+
+
 > 轻量 A 股监控 daemon · Node HTTP/CLI + Python 数据 worker · SQLite watchlist/alerts/cache · Feishu 通知 · OpenClaw skill
-> 源码: `/root/source/tmp/magpie/`
+> 源码: `src/magpie/`
 > 原始仓库: <https://github.com/SymbolStar/magpie>
 
 ## 1. 一句话定位

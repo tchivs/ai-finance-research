@@ -1,7 +1,49 @@
 # quant-buddy-skill 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/pseudo-longinus/quant-buddy-skills.git
+> 分析基线：
+> - `quant-buddy-skills`：commit `4a5501875027e8838d7d87cd69bc2363c22299d8`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/quant-buddy-skills`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `quant-buddy-skills`：`f0797f59eede` → `4a5501875027`
+
+提交摘要：
+- 4a55018 chore(qbs): 更新正式库资产、数据名与板块预设至 4.24.5
+- 84bf180 chore(qbs): 更新正式库资产、数据名与板块预设至 4.24.5
+- 4ca0f13 feat(quant-buddy-skill): 升级至 4.24.4，完善事实核验、Turn 追踪与预设数据
+- 9230a14 fix(qbs): 增加时效性事实核验并升级至 4.24.2
+- 185f72d fix(qbs): 增加时效性事实核验与资产目录冲突处理
+- 83bac5b chore: 更新 quant-buddy-skill 至 4.24.1
+- 17483c0 新增「维度指标库」能力：以前 skill 只能通过 `presets/dimensions.yaml` 看到**综合指标**（维度分）并拿去 `selectByComposition` 选股，看不到细分指标，也拿不到任何指标的口径公式。本次接入两个服务端只读接口，把整套指标库和公式定义打开。
+受影响路径：
+- `M	skills/quant-buddy-skill/CHANGELOG.md`
+- `M	skills/quant-buddy-skill/SKILL.md`
+- `M	skills/quant-buddy-skill/presets/assets_db/future.yaml`
+- `M	skills/quant-buddy-skill/presets/assets_db/index.yaml`
+- `M	skills/quant-buddy-skill/presets/assets_db/stock_a.yaml`
+- `M	skills/quant-buddy-skill/presets/assets_db/stock_hk.yaml`
+- `M	skills/quant-buddy-skill/presets/assets_db/stock_us.yaml`
+- `M	skills/quant-buddy-skill/presets/data_catalog.yaml`
+- `M	skills/quant-buddy-skill/presets/index_info_catalog/guanzhao.yaml`
+- `M	skills/quant-buddy-skill/presets/index_info_catalog/manifest.yaml`
+- `M	skills/quant-buddy-skill/presets/sectors.yaml`
+- `M	skills/quant-buddy-skill/recipes/download-data.md`
+- 其余 15 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 观照量化投研 Skill · A/H/US 行情财务查询 · 公式引擎 · 回测/选股/图表 · session/version/配额治理
-> 源码: `/root/source/tmp/quant-buddy-skills/`
+> 源码: `src/quant-buddy-skills/`
 > 原始仓库: <https://github.com/pseudo-longinus/quant-buddy-skills>
 
 ## 1. 一句话定位

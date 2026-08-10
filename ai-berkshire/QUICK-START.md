@@ -1,139 +1,107 @@
-# ai-berkshire — 设计分析与借鉴
+# ai-berkshire 快速概览
 
-> 原始仓库: <https://github.com/xbtlin/ai-berkshire>
-**定位**: 基于四大师方法论（巴菲特、芒格、段永平、李录）的 AI 价值投资研究框架  
-**版本分析**: 最新
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/xbtlin/ai-berkshire
+> 分析基线：
+> - `ai-berkshire`：commit `3de0ef252dc129532454d10750c5a46027b38b65`
+> 分析日期：2026-08-10
+> 本地源码目录：
+> - `src/ai-berkshire`
+<!-- source-sync:end -->
 
----
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
 
-## 1. 四大师方法论框架
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
 
-核心创新：将四位价值投资大师的思维模型系统化，作为 Agent 的分析框架。
+### `ai-berkshire`：`93aaec3229cb` → `3de0ef252dc1`
 
-| 角色 | 对应大师 | 分析视角 |
-|------|---------|---------|
-| **business-analyst** | 段永平 | 商业模式、护城河、好生意判断 |
-| **financial-analyst** | 巴菲特 | 财务报表、估值、ROE、DCF |
-| **industry-researcher** | 芒格 | 行业格局、竞争壁垒、逆向思考 |
-| **risk-assessor** | 李录 | 风险排查、管理层评估、安全边际 |
+提交摘要：
+- 3de0ef25 README：新增搭配 Claude Code 内置 /deep-research 的说明与两篇实战示例
+- a7ed9332 添加泡泡玛特最新业绩深研报告（2025年报复核+2026H1前瞻），更新thesis追踪记录
+- 4ddc638f 添加梁文锋CUDA护城河核查公众号文章（20260801）；gitignore新增公司品牌图目录忽略规则
+- d3941421 添加《时代α筛选：中国AI产业链》202608：光模块与国产算力双主线筛选，五维度验证+估值锚点+拐点清单，数据截至2026-08-04/05
+- 4d2355da 添加《看懂理想汽车》系列4篇（2026-08版）：认知重置与护城河/两场豪赌/财务拆解/管理层与决策终章，数据基准2026-07-31，经跨篇一致性核查与事实修订
+- ac606f84 添加《看懂英伟达》20260801版系列：5篇正文+系列说明（数据基准2026-07-31，纳入7月云厂商财报季/AMD大会/OpenAI担保谈判增量）
+- 06672ac3 新增浦发银行投资研究报告（20260805）：数据双源验证+抽检准出，结论=观望，8.4元以下转高股息配置
+- cff8b603 修订第02篇：五组并行事实核查后更正数据与口径
+受影响路径：
+- `A .editorconfig`
+- `A .github/ISSUE_TEMPLATE/bug_report.yml`
+- `A .github/ISSUE_TEMPLATE/config.yml`
+- `A .github/ISSUE_TEMPLATE/data_error.yml`
+- `A .github/ISSUE_TEMPLATE/other.yml`
+- `A .github/ISSUE_TEMPLATE/suggestion.yml`
+- `M .gitignore`
+- `M AGENTS.md`
+- `M CLAUDE.md`
+- `A CODE_OF_CONDUCT.md`
+- `A CONTRIBUTING.md`
+- `M README.md`
+- 其余 468 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
 
-### 多 Agent 并行团队
-```
-Team Lead（你做统筹）
-├── Agent 1: 商业模式分析（段永平视角）
-├── Agent 2: 财务估值分析（巴菲特视角）
-├── Agent 3: 行业竞争分析（芒格视角）
-└── Agent 4: 风险管理评估（李录视角）
-```
+## 一句话定位
 
-### 借鉴点
-- 当前项目可吸收「多角色并行分析」模式，不限于 4 个，可以扩展到市场、技术等多个维度
-- 每个角色有明确的分析框架（不是泛泛的"分析一下"），模板化输出
-- 角色之间的冲突/互补观点 = 自然的做空/做多辩论素材
+`ai-berkshire` 是一个以 Markdown Skill 为核心的价值投资研究工作台。它把巴菲特、芒格、段永平、李录四种视角固化为可复用的研究流程，再用精确计算、数据交叉验证和报告抽检约束 AI 输出。它不是行情交易系统，也不是独立运行的服务端应用。
 
----
+## 当前结构
 
-## 2. 研究质量门控
-
-### Quality Gate 链
-
-```
-研究触发 → 信息丰富度评估 → 团队并行分析 → 数据交叉验证 → 报告审计 → 准出
-           (A/B/C 等级)                  (financial_rigor) (report_audit)
-```
-
-### 关键工具
-
-**`tools/financial_rigor.py`** — 精确财务计算
-- 零外部依赖（仅 Python stdlib）
-- 市值验证：`verify-market-cap --price 510 --shares 9.11e9 --reported 4.65e12`
-- 估值验证：PE/PB/DCF/FCF 多角度
-- 多源交叉验证：`cross-validate --field revenue`
-- Benford 法则财务造假检测
-- 三情景估值（乐观/基准/悲观）
-
-**`tools/report_audit.py`** — 报告抽检
-- 从报告中提取所有财务数据点
-- 随机抽样 15% 交给 AI 从可靠信源重新取数
-- 比对 → 差异 > 2% 打回 → 标注原因
-
-### 借鉴点
-- 当前项目（ashare-audit）可直接复用 `financial_rigor.py` 的市值验证、交叉验证逻辑
-- 报告审计模式 → 可应用于 ashare-audit 的分析结果质量检查
-- LLM 生成内容的验证闭环思想
-
----
-
-## 3. AI 研究偏见评估
-
-在启动分析前，先评估公司的「AI 可研究性」：
-
-| 等级 | 特征 | 研究策略调整 |
-|------|------|------------|
-| A级 | 上市多年、券商覆盖广 | 重点放在**反面检验**和**非共识视角** |
-| B级 | 上市不久、覆盖有限 | 推算数据标注置信度，汇总时标注"数据充分度" |
-| C级 | 冷门/新上市 | 转为「第一性原理模式」，聚焦商业本质核心问题 |
-
-深刻洞察：**资料多≠确定性高，资料少≠确定性低**。确定性来自商业模式本身，不来自资料数量。
-
-### 借鉴点
-- 当前项目的数据分析流程可加入「数据充分度评估」前置步骤
-- 不同充分度 → 不同分析策略 → 不同置信度标注
-
----
-
-## 4. 跨 Agent 平台兼容
-
-### 技能同步系统
-```
-skills/*.md (Claude Code 真源)
-    ↓ sync-codex-skills.py
-codex-skills/*/SKILL.md (Codex 生成)
-codex-prompts/*.md (Codex 斜杠命令)
-    ↓ install scripts
-本地 ~/.claude/commands/ 等
+```text
+skills/*.md                 Claude Code 的 canonical workflow（20 个）
+codex-skills/*/SKILL.md     从 skills 生成的 Codex 包
+codex-prompts/*.md          可选的 Codex slash prompt 兼容层
+tools/*.py                  财务验算、数据获取、筛选、回测、报告审计
+tests/*.py                  financial_rigor 与 report_audit 的回归测试
+scripts/                    跨客户端同步和安装脚本
+reports/                    按公司、行业、主题落档的研究结果
+data/                       基础面、观察列表和回测输入
+docs/                       路线图和方法文档
+assets/                     架构图、收益图和发布素材
 ```
 
-真源 → 脚本生成 → 安装，禁止手动维护多份。
+## 核心工作流
 
-### 借鉴点
-- 当前项目如果用多个 Agent（Claude Code / OpenCode / Codex），可以照搬这个同步架构
-- 报告/文档基于模板生成：真源是模板，脚本生成版本，禁止手动维护平行副本
-
----
-
-## 5. 报告目录规范
-
-### 命名约定
-```
-reports/
-├── 腾讯/                    # 公司目录
-│   ├── 腾讯-research-20260408.md      # 深度研究
-│   ├── 腾讯-earnings-2025Q4.md        # 财报分析
-│   ├── 腾讯-thesis.md                  # 长期跟踪 thesis
-│   └── 腾讯-management-20260409.md     # 管理层评估
-├── AI算力-funnel-20260509.md           # 漏斗筛选
-├── portfolio-latest.md                 # 组合总览
-└── 多公司对比-checklist.md              # 多公司交叉对比
+```text
+研究问题
+  -> quality-screen / industry-funnel 初筛
+  -> investment-research 或 investment-team 深研
+  -> financial-data 取数与 financial_rigor.py 验算
+  -> report_audit.py 抽检报告数据点
+  -> reports/ 归档，并由 thesis-tracker 持续复核
 ```
 
-硬性原则：
-- 公司相关 → 公司目录内
-- 行业/主题 → 根目录
-- 数据必须标注来源，关键数据至少 2 个来源交叉验证
-- 严格区分「事实」与「观点」
+复杂任务由 Team Lead 拆成四个视角并行研究；轻量任务直接调用单个 Skill 和工具。`/deep-research` 是 Claude Code 客户端的外部能力，不属于本仓库 20 个 Skill。
 
-### 借鉴点
-- HermesAlpha 的报告产出可按此规范组织
+## 20 个 Skill 的分组
 
----
+- 深度研究：`investment-research`、`investment-team`、`management-deep-dive`、`private-company-research`、`deep-company-series`
+- 财报与发布：`earnings-review`、`earnings-team`、`wechat-article`
+- 行业与筛选：`industry-research`、`industry-funnel`、`quality-screen`、`bottleneck-hunter`、`investment-checklist`
+- 组合与追踪：`income-investment`、`portfolio-review`、`thesis-tracker`、`thesis-drift`、`news-pulse`
+- 思维与数据：`dyp-ask`、`financial-data`
 
-## 当前项目可借鉴点总结
+## 最值得借鉴的设计
 
-| 维度 | ai-berkshire 做法 | 适用项目 |
-|------|------------------|---------|
-| 分析框架 | 大师方法论 → 角色 Agent → 并行研究 | HermesAlpha 多视角分析 |
-| 质量门控 | financial_rigor + report_audit 双工具 | ashare-audit 验证 |
-| 数据充分度 | A/B/C 三级评估 → 策略自适应 | 所有分析流程 |
-| 跨平台技能 | md 真源 → 脚本生成 → 部署 | 多 Agent 项目 |
-| 报告规范 | 公司/行业/主题 三层目录 + 日期后缀 | 报告产出组织 |
+1. **canonical workflow**：`skills/*.md` 是唯一真源，脚本生成 Codex 兼容层，避免双平台版本漂移。
+2. **研究质量门**：信息充分度 A/B/C 分级、双源核验、Decimal 精确算术、报告随机抽检组成闭环。
+3. **事实与观点分离**：报告要求写清数据来源、估计值、置信度和反面论据，适合迁移到其他研究 Agent。
+
+## 限制
+
+- 主要资产是提示词、Markdown 和本地脚本，结论质量仍依赖模型、数据源和人工复核。
+- `tools/` 的行情/财务脚本需要外部数据服务和相应凭据；仓库本身不提供数据授权。
+- 报告目录是研究结果，不等同于当前源码行为；变更后必须重新阅读代码和调用路径。
+
+## 常用命令
+
+```bash
+python3 scripts/sync-codex-skills.py
+python3 scripts/sync-codex-skills.py --check
+python3 -m unittest discover -s tests
+python3 tools/financial_rigor.py --help
+python3 tools/report_audit.py --help
+```
+
+[阅读 DEEP-ANALYSIS.md](DEEP-ANALYSIS.md)

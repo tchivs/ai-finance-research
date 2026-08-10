@@ -1,5 +1,16 @@
 # Vibe-Trading — 设计分析与借鉴
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HKUDS/Vibe-Trading
+> 分析基线：
+> - `Vibe-Trading`：commit `d8d22a70f702da85aa55a6e920c2db89ae58dfa8`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Vibe-Trading`
+<!-- source-sync:end -->
+
+
 > 原始仓库: <https://github.com/HKUDS/Vibe-Trading>
 **定位**: 自然语言驱动的个人交易 AI Agent，直接关联券商账户  
 **版本分析**: v0.1.10

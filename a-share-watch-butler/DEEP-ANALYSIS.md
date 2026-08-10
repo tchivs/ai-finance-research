@@ -1,7 +1,18 @@
 # a-share-watch-butler 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/nexaforgelab/a-share-watch-butler.git
+> 分析基线：
+> - `a-share-watch-butler`：commit `6d9076b164b1ac8a098b1baa0b9c2491b59d6910`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/a-share-watch-butler`
+<!-- source-sync:end -->
+
+
 > 定时 Agent 链路 · 三层输出契约 · 预测-验证-再校准闭环 · 可审计盯盘系统
-> 源码: `/root/source/tmp/a-share-watch-butler/`
+> 源码: `src/a-share-watch-butler/`
 > 原始仓库: <https://github.com/nexaforgelab/a-share-watch-butler>
 
 ---

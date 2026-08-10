@@ -1,7 +1,18 @@
 # DeepEar 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HKUSTDial/DeepEar.git
+> 分析基线：
+> - `DeepEar`：commit `579b7d418554f5da0a708e940b8df4d1ad035067`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/DeepEar`
+<!-- source-sync:end -->
+
+
 > 公共舆情到投资信号 · ISQ 质量评分 · checkpoint 化研究流程 · 信号演化追踪
-> 源码: `/root/source/tmp/DeepEar/`
+> 源码: `src/DeepEar/`
 > 原始仓库: <https://github.com/HKUSTDial/DeepEar>
 
 ---

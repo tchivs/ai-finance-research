@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <section class="home-hero">
+    <div class="eyebrow">SOURCE-BOUND KNOWLEDGE BASE</div>
+    <h1>{{ .Title }}</h1>
+    <p class="hero-copy">把开源项目源码、固定版本、实现证据和架构决策整理成一套可检索、可回放的研究资料库。</p>
+    <div class="hero-meta">
+      <span><b>71</b> 个项目研究档案</span>
+      <span><b>19</b> 份核心决策文档</span>
+      <span><b>2026-08-10</b> 最近分析基线</span>
+    </div>
+  </section>
+
+  <section class="home-grid">
+    <a class="feature-panel accent-cyan" href="{{ "library/quant-workbench-prd/" | relURL }}">
+      <span class="panel-kicker">DESIGN BASELINE</span>
+      <h2>量化工作台设计 PRD</h2>
+      <p>HermesAlpha 工作台与 HermesData 统一数据平台的多市场架构、数据契约和分阶段交付。</p>
+      <span class="panel-link">打开 PRD <span>→</span></span>
+    </a>
+    <a class="feature-panel accent-amber" href="{{ "library/decision-matrix/" | relURL }}">
+      <span class="panel-kicker">TECHNICAL CHOICES</span>
+      <h2>模式决策矩阵</h2>
+      <p>比较数据存储、编排、实时计算、接口、策略和执行边界，记录默认选型与暂缓项。</p>
+      <span class="panel-link">查看决策 <span>→</span></span>
+    </a>
+  </section>
+
+  <section class="home-section">
+    <div class="section-heading">
+      <div><span class="eyebrow">NAVIGATE</span><h2>从问题进入研究</h2></div>
+      <a href="{{ "library/" | relURL }}">查看全部文档 →</a>
+    </div>
+    <div class="route-grid">
+      <a href="{{ "library/data-foundation/" | relURL }}"><span>01</span><strong>建设统一数据平台</strong><small>数据源、归一化、Parquet、查询和质量边界</small></a>
+      <a href="{{ "library/delivery-roadmap/" | relURL }}"><span>02</span><strong>制定实施路线</strong><small>阶段门禁、任务依赖、验收和分布式演进</small></a>
+      <a href="{{ "library/synthesis/" | relURL }}"><span>03</span><strong>理解跨项目共性</strong><small>从 71 个项目提炼可迁移的工程模式</small></a>
+      <a href="{{ "projects/" | relURL }}"><span>04</span><strong>核对源码证据</strong><small>先读 QUICK-START，再进入 DEEP-ANALYSIS</small></a>
+    </div>
+  </section>
+
+  <section class="home-section source-note">
+    <div class="section-heading"><div><span class="eyebrow">PROVENANCE</span><h2>证据优先</h2></div></div>
+    <div class="provenance-grid">
+      <div><b>固定 commit</b><span>每个项目文档记录上游仓库和分析基线，避免把默认分支当作事实。</span></div>
+      <div><b>分层阅读</b><span>综合文档负责决策，项目档案负责实现细节、限制和未验证项。</span></div>
+      <div><b>可再生成</b><span>Markdown 是内容源，Hugo 页面由生成脚本同步，不手工维护重复副本。</span></div>
+    </div>
+  </section>
+{{ end }}

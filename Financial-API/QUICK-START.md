@@ -1,7 +1,18 @@
 # Financial-API 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HiThink-Tech/Financial-API.git
+> 分析基线：
+> - `Financial-API`：commit `f8cdea908469b1b3b8bfb88dbb4d4a3959b1905c`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Financial-API`
+<!-- source-sync:end -->
+
+
 > HiThink-Tech · 同花顺官方 A 股金融数据服务 · REST/MCP/Node.js CLI/Python 3.11+/DuckDB
-> 源码: `/root/source/docs/aaa/src/Financial-API/`
+> 源码: `src/Financial-API/`
 > 原始仓库: <https://github.com/HiThink-Tech/Financial-API>
 
 ## 1. 一句话定位

@@ -1,7 +1,18 @@
 # TradingAgents Family 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/TauricResearch/TradingAgents.git
+> 分析基线：
+> - `TradingAgents`：commit `a33fd4c0f134485a43553a2c23a63cb14adbd88f`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/TradingAgents`
+<!-- source-sync:end -->
+
+
 > TradingAgents + TradingAgents-AShare · 多 Agent 投研与交易决策框架 · LangGraph debate / risk review / Web API
-> 源码: `/root/source/tmp/TradingAgents/`, `/root/source/tmp/TradingAgents-AShare/`
+> 源码: `src/TradingAgents/`, `src/TradingAgents-AShare/`
 > 原始仓库: [TradingAgents](https://github.com/TauricResearch/TradingAgents) · [TradingAgents-AShare](https://github.com/KylinMountain/TradingAgents-AShare)
 
 ## 1. 一句话定位

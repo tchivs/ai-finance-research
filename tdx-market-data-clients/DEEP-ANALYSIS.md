@@ -1,7 +1,67 @@
 # TDX Market Data Clients 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/handsomejustin/easy_tdx.git
+> - https://github.com/electkismet/eltdx.git
+> 分析基线：
+> - `easy_tdx`：commit `513ee15c83ca14b81de1b2890c2369b6456bc864`
+> - `eltdx`：commit `b6308e67652dd6a6f65efbdd37397dd10495c95e`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/easy_tdx`
+> - `src/eltdx`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `easy_tdx`：`3b7ce97f2a69` → `513ee15c83ca`
+
+提交摘要：
+- 513ee15 Merge pull request #46 from handsomejustin/feat/issue-43-bars-mac-adjust
+- 5a3ad15 feat(web): /bars 迁移到 MacClient + 支持复权（issue #43）
+- e5e8f75 Merge pull request #45 from handsomejustin/fix/issue-41-fund-flow-failover
+- 60bd058 style(tests): ruff format 修复 patch.object 参数换行（CI ruff format --check 失败）
+- 0490f67 fix(client): get_history_fund_flow 加空数据故障转移（issue #41）
+受影响路径：
+- `M	CHANGELOG.md`
+- `M	pyproject.toml`
+- `M	src/easy_tdx/client.py`
+- `M	src/easy_tdx/web/convert.py`
+- `M	src/easy_tdx/web/deps.py`
+- `M	src/easy_tdx/web/routers/bars.py`
+- `M	src/easy_tdx/web/schemas.py`
+- `M	tests/unit/test_failover.py`
+- `M	tests/unit/test_web_api.py`
+
+### `eltdx`：`3352b0bed30d` → `b6308e67652d`
+
+提交摘要：
+- b6308e6 Validate MCP inputs before opening connections
+- d55ed80 Release eltdx 1.3.0 MCP SDK 2 update
+- 7c39f73 Update README.md
+受影响路径：
+- `M	.github/workflows/ci.yml`
+- `M	README.md`
+- `M	docs/API_REFERENCE.md`
+- `M	docs/ARCHITECTURE.md`
+- `M	docs/CHANGELOG.md`
+- `M	docs/COMMANDS_7709.md`
+- `M	docs/MCP.md`
+- `M	docs/METHOD_REFERENCE.md`
+- `M	docs/PRODUCT.md`
+- `M	docs/README.md`
+- `M	docs/ROADMAP.md`
+- `M	docs/assets/interface-catalog-data.js`
+- 其余 14 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > TDX MAC/7709 protocol · host probing · heartbeat/reconnect · VIPDOC offline files · business APIs · MCP
-> 源码: `/root/source/tmp/easy_tdx/`, `/root/source/tmp/eltdx/`
+> 源码: `src/easy_tdx/`, `src/eltdx/`
 > 原始仓库: [easy_tdx](https://github.com/handsomejustin/easy_tdx) · [eltdx](https://github.com/electkismet/eltdx)
 
 ## 1. 合并视角

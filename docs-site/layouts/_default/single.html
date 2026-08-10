@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="breadcrumbs"><a href="{{ .Site.Home.RelPermalink }}">首页</a><span>/</span><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a><span>/</span><b>{{ .Title }}</b></div>
+  <div class="article-layout">
+    <article class="article">
+      <header class="article-header">
+        <div class="eyebrow">{{ if eq .Params.kind "deep-analysis" }}DEEP ANALYSIS{{ else if eq .Params.kind "quick-start" }}QUICK START{{ else }}RESEARCH NOTE{{ end }}</div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        {{ with .Params.source_file }}<div class="source-badge">源文件 <code>{{ . }}</code></div>{{ end }}
+      </header>
+      <div class="article-content">{{ .Content }}</div>
+      {{ partial "pagination.html" . }}
+    </article>
+    {{ if .TableOfContents }}
+      <aside class="article-toc"><div class="toc-title">ON THIS PAGE</div>{{ .TableOfContents }}</aside>
+    {{ end }}
+  </div>
+{{ end }}

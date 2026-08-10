@@ -1,7 +1,18 @@
 # Vibe-Trading 终极深度逆向分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HKUDS/Vibe-Trading
+> 分析基线：
+> - `Vibe-Trading`：commit `d8d22a70f702da85aa55a6e920c2db89ae58dfa8`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Vibe-Trading`
+<!-- source-sync:end -->
+
+
 > 79 技能 · 53 MCP 工具 · 9 回测引擎 · 5 组合优化器
-> 源码: `/root/source/tmp/Vibe-Trading/`
+> 源码: `src/Vibe-Trading/`
 > 原始仓库: <https://github.com/HKUDS/Vibe-Trading>
 
 ---

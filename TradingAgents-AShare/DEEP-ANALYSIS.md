@@ -1,7 +1,18 @@
 # TradingAgents-AShare 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/KylinMountain/TradingAgents-AShare.git
+> 分析基线：
+> - `TradingAgents-AShare`：commit `fef942f94081885a7e6956c71645dbaf3b93b811`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/TradingAgents-AShare`
+<!-- source-sync:end -->
+
+
 > A 股智能投研多智能体系统 · LangGraph 状态图编排、可追溯辩论、A 股数据路由与结构化交易决策
-> 源码: `/root/source/docs/aaa/src/TradingAgents-AShare/`
+> 源码: `src/TradingAgents-AShare/`
 > 原始仓库: <https://github.com/KylinMountain/TradingAgents-AShare>
 
 ## 1. 为什么 TradingAgents-AShare 重要

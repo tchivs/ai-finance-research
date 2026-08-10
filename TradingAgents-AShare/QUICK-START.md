@@ -1,7 +1,18 @@
 # TradingAgents-AShare 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/KylinMountain/TradingAgents-AShare.git
+> 分析基线：
+> - `TradingAgents-AShare`：commit `fef942f94081885a7e6956c71645dbaf3b93b811`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/TradingAgents-AShare`
+<!-- source-sync:end -->
+
+
 > KylinMountain · 面向 A 股的多智能体投研与交易建议系统 · Python、LangGraph、FastAPI、React、Vite
-> 源码: `/root/source/docs/aaa/src/TradingAgents-AShare/`
+> 源码: `src/TradingAgents-AShare/`
 > 原始仓库: <https://github.com/KylinMountain/TradingAgents-AShare>
 
 ## 1. 一句话定位

@@ -1,7 +1,43 @@
 # PanWatch 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/TNT-Likely/PanWatch.git
+> 分析基线：
+> - `PanWatch`：commit `c1b064fee9f0cae60731a6e19def2817f06cec09`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/PanWatch`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `PanWatch`：`5b5ac168ce0c` → `c1b064fee9f0`
+
+提交摘要：
+- c1b064f feat(dashboard): 首页视觉改版 + 指数/美股K线数据源修复 + 首屏提速
+受影响路径：
+- `M	frontend/packages/api/src/dashboard.ts`
+- `M	frontend/packages/api/src/portfolio.ts`
+- `A	frontend/src/components/BenchChart.tsx`
+- `A	frontend/src/components/Sparkline.tsx`
+- `M	frontend/src/pages/Dashboard.tsx`
+- `M	packages/marketdata/src/marketdata/client.py`
+- `M	packages/marketdata/src/marketdata/vendors/kline.py`
+- `M	packages/marketdata/tests/test_index_methods.py`
+- `M	packages/marketdata/tests/test_kline_vendors.py`
+- `M	src/core/portfolio_benchmark.py`
+- `M	src/web/api/market.py`
+- `M	tests/conftest.py`
+- 其余 3 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 自托管 AI 盯盘助手 · FastAPI + React PWA · TradingAgents 集成 · 价格提醒 · 持仓/模拟盘/通知闭环
-> 源码: `/root/source/tmp/PanWatch/`
+> 源码: `src/PanWatch/`
 > 原始仓库: <https://github.com/TNT-Likely/PanWatch>
 
 ## 1. 一句话定位

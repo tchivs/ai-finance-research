@@ -1,7 +1,18 @@
 # snowball-cli 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/baixianger/snowball-cli.git
+> 分析基线：
+> - `snowball-cli`：commit `f3c0a641c835c5f7425afa61e1f5fc1a11b463b4`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/snowball-cli`
+<!-- source-sync:end -->
+
+
 > 雪球数据 CLI · JSON 输出 · A股/港股/美股/基金/财务/F10/社交/KOL · Agent 友好命令层
-> 源码: `/root/source/tmp/snowball-cli/`
+> 源码: `src/snowball-cli/`
 > 原始仓库: <https://github.com/baixianger/snowball-cli>
 
 ## 1. 一句话定位

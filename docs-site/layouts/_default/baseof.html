@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+  </head>
+  <body class="page-{{ .Kind }}" data-baseurl="{{ .Site.Home.RelPermalink }}">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="{{ .Site.Home.RelPermalink }}">
+          <span class="brand-mark">AF</span>
+          <span>
+            <strong>AI + Finance</strong>
+            <small>Research Library</small>
+          </span>
+        </a>
+        <nav class="topnav" aria-label="主导航">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relURL }}" class="{{ if eq $.RelPermalink (.URL | relURL) }}is-active{{ end }}">{{ .Name }}</a>
+          {{ end }}
+        </nav>
+        <form class="search" id="site-search" role="search">
+          <label class="sr-only" for="search-input">搜索文档</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="搜索研究库" autocomplete="off">
+          <div id="search-results" class="search-results" hidden></div>
+        </form>
+      </div>
+    </header>
+    <div class="site-shell">
+      {{ partial "sidebar.html" . }}
+      <main class="main-content">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+    <footer class="site-footer">
+      <span>{{ .Site.Title }}</span>
+      <span>源码研究基线：{{ .Site.Params.sourceDate }}</span>
+      <a href="{{ .Site.Params.repository }}">GitHub Repository</a>
+    </footer>
+    <script src="{{ "js/search.js" | relURL }}" defer></script>
+  </body>
+</html>

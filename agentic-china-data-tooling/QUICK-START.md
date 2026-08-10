@@ -1,7 +1,21 @@
 # Agentic China Data Tooling 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/shaoxing-xie/openclaw-data-china-stock.git
+> - https://github.com/chengzuopeng/stock-sdk-mcp.git
+> 分析基线：
+> - `openclaw-data-china-stock`：commit `6361207818a7ef3f07266de304211788325f5478`
+> - `stock-sdk-mcp`：commit `6b57f40b3c426a5c8d0edaae5d7ea49708a5e54b`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/openclaw-data-china-stock`
+> - `src/stock-sdk-mcp`
+<!-- source-sync:end -->
+
+
 > openclaw-data-china-stock + stock-sdk-mcp + Financial-API · Agent 数据工具层与本地 MarketDB
-> 源码: `/root/source/tmp/openclaw-data-china-stock/`, `/root/source/tmp/stock-sdk-mcp/`, `/root/source/tmp/Financial-API/`
+> 源码: `src/openclaw-data-china-stock/`, `src/stock-sdk-mcp/`, `src/Financial-API/`
 > 原始仓库: [openclaw-data-china-stock](https://github.com/shaoxing-xie/openclaw-data-china-stock) · [stock-sdk-mcp](https://github.com/chengzuopeng/stock-sdk-mcp) · [Financial-API](https://github.com/HiThink-Tech/Financial-API)
 
 ## 1. 一句话定位

@@ -1,7 +1,18 @@
 # AlphaAgent 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/RndmVariableQ/AlphaAgent.git
+> 分析基线：
+> - `AlphaAgent`：commit `b42cb397025510da44355db9dcf278304321f589`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/AlphaAgent`
+<!-- source-sync:end -->
+
+
 > A 股 panel · 因子 DSL · memmap FactorZoo · IC/MLS 评估 · LLM tool-call mining
-> 源码: `/root/source/tmp/AlphaAgent/`
+> 源码: `src/AlphaAgent/`
 > 原始仓库: <https://github.com/RndmVariableQ/AlphaAgent>
 
 ## 1. 系统定位

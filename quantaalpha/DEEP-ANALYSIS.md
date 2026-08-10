@@ -1,7 +1,18 @@
 # QuantaAlpha 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/QuantaAlpha/QuantaAlpha.git
+> 分析基线：
+> - `QuantaAlpha`：commit `b7ceb27b1001261d7a95b209a963664ae1f8ab23`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/QuantaAlpha`
+<!-- source-sync:end -->
+
+
 > parallel planning · AlphaAgentLoop · trajectory pool · mutation/crossover evolution · factor library
-> 源码: `/root/source/tmp/QuantaAlpha/`
+> 源码: `src/QuantaAlpha/`
 > 原始仓库: <https://github.com/QuantaAlpha/QuantaAlpha>
 
 ## 1. 架构定位

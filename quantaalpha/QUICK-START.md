@@ -1,7 +1,18 @@
 # QuantaAlpha 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/QuantaAlpha/QuantaAlpha.git
+> 分析基线：
+> - `QuantaAlpha`：commit `b7ceb27b1001261d7a95b209a963664ae1f8ab23`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/QuantaAlpha`
+<!-- source-sync:end -->
+
+
 > 多方向因子挖掘与演化 · parallel directions / AlphaAgentLoop / mutation / crossover / FactorLibrary
-> 源码: `/root/source/tmp/QuantaAlpha/`
+> 源码: `src/QuantaAlpha/`
 > 原始仓库: <https://github.com/QuantaAlpha/QuantaAlpha>
 
 ## 1. 一句话定位

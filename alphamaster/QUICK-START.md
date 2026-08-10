@@ -1,7 +1,46 @@
 # AlphaMaster 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/rosemarycox5334-debug/AlphaMaster.git
+> 分析基线：
+> - `AlphaMaster`：commit `e45aa15a6a6c0bdc45c3cbb010c521470f3cabfd`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/AlphaMaster`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `AlphaMaster`：`3b8c86a1d13b` → `e45aa15a6a6c`
+
+提交摘要：
+- e45aa15 1.22
+- 044ace0 Update tongdaxin_source.py
+- ff861da 1.21
+- 5d145b7 Update README.md
+受影响路径：
+- `M	README.md`
+- `D	_launch_eurusd.bat`
+- `D	_launch_index.bat`
+- `D	_launch_jp225.bat`
+- `D	_launch_precious.bat`
+- `D	_launch_us100.bat`
+- `D	_launch_us2000.bat`
+- `D	_launch_us30.bat`
+- `D	_launch_us500.bat`
+- `D	_launch_web.bat`
+- `D	_launch_xauusd.bat`
+- `M	config.py`
+- 其余 5 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 强化学习公式搜索 · StackVM · Parquet 训练/回测 · Web 实时信号
-> 源码: `/root/source/tmp/AlphaMaster/`
+> 源码: `src/AlphaMaster/`
 > 原始仓库: <https://github.com/rosemarycox5334-debug/AlphaMaster>
 > 研究基线: `3b8c86a`（2026-07-24，`1.2`）
 
@@ -41,7 +80,7 @@ AlphaMaster 是一个把量化因子表示为 token 公式、由神经网络策�
 - 默认至少 3,000 根 K 线；加载时会按时间排序、去重，并检查列完整性。
 
 ```bash
-cd /root/source/tmp/AlphaMaster
+cd src/AlphaMaster
 python -m pip install -r requirements.txt
 python train_file.py --data-file /absolute/path/BTCUSDT_H1.parquet
 ```
@@ -51,7 +90,7 @@ python train_file.py --data-file /absolute/path/BTCUSDT_H1.parquet
 ### 3.2 使用 Web 控制台
 
 ```bash
-cd /root/source/tmp/AlphaMaster
+cd src/AlphaMaster
 python run_web.py --port 8765
 ```
 

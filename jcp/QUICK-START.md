@@ -1,7 +1,18 @@
 # JCP 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/run-bigpig/jcp.git
+> 分析基线：
+> - `jcp`：commit `44af274e0bfa2cef1364527eda1c8e64dfd00a64`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/jcp`
+<!-- source-sync:end -->
+
+
 > 韭菜盘 / JCP AI · Wails 桌面股票分析系统 · 多 Agent 会议室 · 股票记忆 · OpenClaw HTTP 分析服务
-> 源码: `/root/source/tmp/jcp/`
+> 源码: `src/jcp/`
 > 原始仓库: <https://github.com/run-bigpig/jcp>
 
 ## 1. 一句话定位

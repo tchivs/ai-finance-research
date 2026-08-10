@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <div class="page-heading">
+    <div class="eyebrow">{{ if eq .Section "projects" }}PROJECT CATALOG{{ else }}RESEARCH DOCUMENTS{{ end }}</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="intro-copy">{{ . }}</div>{{ end }}
+  </div>
+  <div class="list-stack">
+    {{ range .Pages.ByWeight }}
+      <a class="list-item" href="{{ .RelPermalink }}">
+        <span class="list-number">{{ printf "%02d" .Weight }}</span>
+        <span class="list-body"><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+        <span class="list-arrow">→</span>
+      </a>
+    {{ else }}
+      <p class="empty-state">暂无内容。</p>
+    {{ end }}
+  </div>
+{{ end }}

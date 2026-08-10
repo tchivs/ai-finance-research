@@ -1,7 +1,18 @@
 # OpenAshare 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/ZhiweiChen-coder/OpenAshare.git
+> 分析基线：
+> - `OpenAshare`：commit `bcdaabdaf936cd90ea556651172936d168d89127`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/OpenAshare`
+<!-- source-sync:end -->
+
+
 > 本地优先研究台 · FastAPI 服务层 · SSE 进度 · Agent Memory · 热点/持仓/策略闭环
-> 源码: `/root/source/tmp/OpenAshare/`
+> 源码: `src/OpenAshare/`
 > 原始仓库: <https://github.com/ZhiweiChen-coder/OpenAshare>
 
 ---

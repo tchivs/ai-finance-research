@@ -1,7 +1,18 @@
 # Alpha Evolution Lab 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/hongha5192-bit/AlphaAgentEvo.git
+> 分析基线：
+> - `AlphaAgentEvo`：commit `4e69a98e5205af1657dd6782ca0af62994d73b78`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/AlphaAgentEvo`
+<!-- source-sync:end -->
+
+
 > 策略 YAML DSL · RunPipeline · EvolutionPipeline · ResearchCommittee · 因子 reward · multi-searcher controller
-> 源码: `/root/source/tmp/alphaevo/`, `/root/source/tmp/AlphaAgentEvo/`, `/root/source/tmp/EvoAlpha/`
+> 源码: `src/alphaevo/`, `src/AlphaAgentEvo/`, `src/EvoAlpha/`
 > 原始仓库: [alphaevo](https://github.com/ZhuLinsen/alphaevo) · [AlphaAgentEvo](https://github.com/hongha5192-bit/AlphaAgentEvo) · [EvoAlpha](https://github.com/AAAAndrews/EvoAlpha)
 
 ## 1. 合并视角

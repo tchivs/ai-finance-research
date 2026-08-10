@@ -1,7 +1,49 @@
 # Lean 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/QuantConnect/Lean.git
+> 分析基线：
+> - `Lean`：commit `c6cc3b743ed7b65d5e0b9fa2bfc18b7d3ac2aea0`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Lean`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `Lean`：`cd52034ddf55` → `c6cc3b743ed7`
+
+提交摘要：
+- c6cc3b743 Restore the LogEntry based SaveLogs signature (#9658)
+- 3c53d1705 Fix the warm-up order analysis for Python algorithms and register the MarketOnClose too-late analysis (#9657)
+- de8d2f8c9 Update US equity market hours through 2028 (#9646)
+- ea470761a Re-capture starting portfolio value after warm-up and fire OnWarmupFinished before post-warm-up data (#9653)
+- 138f257fb Run a reduced results analysis periodically during backtests (#9632)
+- 42b9d7666 Fix the USD/KRW minimum price variation (#9656)
+- da1bade3f Add Interactive Brokers KRX future fees (#9655)
+- 35b32b401 Add margin-aware option strategy match selection (#9639)
+受影响路径：
+- `A	Algorithm.CSharp/OnWarmupFinishedOrderingRegressionAlgorithm.cs`
+- `M	Algorithm.CSharp/OptionChainConsistencyRegressionAlgorithm.cs`
+- `A	Algorithm.CSharp/OptionEquityOverlappingBullCallSpreadsRegressionAlgorithm.cs`
+- `M	Algorithm.CSharp/TrainingInitializeRegressionAlgorithm.cs`
+- `A	Algorithm.CSharp/WarmupStartingPortfolioValueRegressionAlgorithm.cs`
+- `M	Common/Currencies.cs`
+- `A	Common/Exceptions/ModuleNotFoundPythonExceptionInterpreter.cs`
+- `A	Common/Exceptions/MultipleInheritancePythonExceptionInterpreter.cs`
+- `M	Common/Interfaces/IRegressionAlgorithmDefinition.cs`
+- `M	Common/Messages/Messages.Exceptions.cs`
+- `M	Common/Orders/Fees/InteractiveBrokersFeeModel.cs`
+- `M	Common/Securities/Option/StrategyMatcher/IOptionStrategyMatchObjectiveFunction.cs`
+- 其余 54 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 原始仓库: <https://github.com/QuantConnect/Lean>
-> 分析基线：`QuantConnect/Lean` commit `cd52034ddf55c0c9aa57264d2a148e563924100f`。本文为静态源码核对，未下载 Lean 数据集、运行 Docker、执行回测、启动 live job 或连接经纪商。
 
 ## 1. 核心架构：以目标为边界的算法框架
 

@@ -1,7 +1,18 @@
 # Kronos 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/shiyu-coder/Kronos.git
+> 分析基线：
+> - `Kronos`：commit `67b630e67f6a18c9e9be918d9b4337c960db1e9a`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Kronos`
+<!-- source-sync:end -->
+
+
 > 金融 K 线序列的离散 token 基础模型 · 两阶段量化器 + 自回归 Decoder-only Transformer
-> 源码: `/root/source/docs/aaa/src/Kronos/`
+> 源码: `src/Kronos/`
 > 原始仓库: <https://github.com/shiyu-coder/Kronos>
 
 ## 1. 为什么 Kronos 重要

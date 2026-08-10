@@ -1,284 +1,104 @@
-# ai-berkshire 终极深度逆向分析
+# ai-berkshire 深度分析
 
-> 17 个分析技能 · 四大师方法论 · 双平台兼容 (Claude Code + Codex)
-> 源码: `/root/source/tmp/ai-berkshire/`
-> 原始仓库: <https://github.com/xbtlin/ai-berkshire>
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/xbtlin/ai-berkshire
+> 分析基线：
+> - `ai-berkshire`：commit `3de0ef252dc129532454d10750c5a46027b38b65`
+> 分析日期：2026-08-10
+> 本地源码目录：
+> - `src/ai-berkshire`
+<!-- source-sync:end -->
 
----
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
 
-## 1. 四大师方法论体系
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
 
-### 1.1 四视角分工
+### `ai-berkshire`：`93aaec3229cb` → `3de0ef252dc1`
 
-| 大师 | 视角 | 核心问题 | 语言风格 | 关注维度 |
-|------|------|---------|---------|---------|
-| 段永平 | 生意本质 | 这门生意变好了还是变差了？ | 口语化、直白、引用"本分" | 商业模式、管理层诚信 |
-| 巴菲特 | 护城河/财务质量 | 赚的是真钱还是假钱？ | 引用致股东信、幽默 | ROE、现金流、护城河 |
-| 芒格 | 竞争格局 | 竞争格局在怎么变？ | 逆向思维、多元思维模型 | 失败路径、风险 |
-| 李录 | 文明级趋势 | 有什么风险信号？ | 文明史观、长期主义 | 文明级范式转移、终局 |
+提交摘要：
+- 3de0ef25 README：新增搭配 Claude Code 内置 /deep-research 的说明与两篇实战示例
+- a7ed9332 添加泡泡玛特最新业绩深研报告（2025年报复核+2026H1前瞻），更新thesis追踪记录
+- 4ddc638f 添加梁文锋CUDA护城河核查公众号文章（20260801）；gitignore新增公司品牌图目录忽略规则
+- d3941421 添加《时代α筛选：中国AI产业链》202608：光模块与国产算力双主线筛选，五维度验证+估值锚点+拐点清单，数据截至2026-08-04/05
+- 4d2355da 添加《看懂理想汽车》系列4篇（2026-08版）：认知重置与护城河/两场豪赌/财务拆解/管理层与决策终章，数据基准2026-07-31，经跨篇一致性核查与事实修订
+- ac606f84 添加《看懂英伟达》20260801版系列：5篇正文+系列说明（数据基准2026-07-31，纳入7月云厂商财报季/AMD大会/OpenAI担保谈判增量）
+- 06672ac3 新增浦发银行投资研究报告（20260805）：数据双源验证+抽检准出，结论=观望，8.4元以下转高股息配置
+- cff8b603 修订第02篇：五组并行事实核查后更正数据与口径
+受影响路径：
+- `A .editorconfig`
+- `A .github/ISSUE_TEMPLATE/bug_report.yml`
+- `A .github/ISSUE_TEMPLATE/config.yml`
+- `A .github/ISSUE_TEMPLATE/data_error.yml`
+- `A .github/ISSUE_TEMPLATE/other.yml`
+- `A .github/ISSUE_TEMPLATE/suggestion.yml`
+- `M .gitignore`
+- `M AGENTS.md`
+- `M CLAUDE.md`
+- `A CODE_OF_CONDUCT.md`
+- `A CONTRIBUTING.md`
+- `M README.md`
+- 其余 468 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
 
-### 1.2 四层深度流程
+## 1. 系统边界与资产形态
 
-```
-快速过滤（quality-screen 7条去劣）
-    ↓ 幸存者
-粗筛（industry-funnel 第2层：5条硬指标）
-    ↓ ≤10家
-精细分析（industry-funnel 第3层：每家300-500字结构化）
-    ↓ 终选3家
-四大师深度（每家800-1200字，段/巴/芒/李四视角）
-```
+项目的运行时不是一个常驻服务，而是“客户端读取 Skill、Skill 调工具、结果写报告”的文件型研究系统。入口主要是 `skills/*.md` 中的工作流说明；`tools/*.py` 提供确定性计算和数据适配；`reports/`、`data/`、`实盘记录/` 保存研究状态和证据。
 
----
+源码树中有 20 个 Claude Code Skill、对应的 `codex-skills/` 生成物和可选的 `codex-prompts/` 兼容层。`AGENTS.md` 明确规定 `skills/*.md` 是 canonical source，不能直接把生成物当成手工维护的第二套实现。
 
-## 2. 17 个分析技能逐一拆解
+## 2. 控制流与平台兼容
 
-### 2.1 技能总览
-
-| # | 技能 | 大小 | 阶段 | 核心功能 |
-|---|------|------|------|---------|
-| 1 | `industry-funnel` | 10KB | 筛选 | 四层漏斗：全市场→30家→10家→3家 |
-| 2 | `quality-screen` | 7KB | 筛选 | 7条去劣硬指标 + 3条豁免 |
-| 3 | `bottleneck-hunter` | 18KB | 筛选 | 供应链瓶颈套利（第二/三层瓶颈） |
-| 4 | `investment-research` | 11KB | 研究 | 四大师综合分析单股 |
-| 5 | `investment-team` | 10KB | 研究 | 4角色并行分析 |
-| 6 | `investment-checklist` | 10KB | 研究 | 买入前最终检查清单 |
-| 7 | `private-company-research` | 45KB | 研究 | 非上市公司深度研究（最大技能） |
-| 8 | `industry-research` | 9KB | 行业 | 产业链全景分析 |
-| 9 | `earnings-review` | 9KB | 财报 | 单季业绩快速解读 |
-| 10 | `earnings-team` | 17KB | 财报 | 四大师+编辑+读者三阶段闭环 |
-| 11 | `thesis-tracker` | 8KB | 追踪 | 买入后纪律系统 |
-| 12 | `news-pulse` | 12KB | 新闻 | 4Agent并行异动归因 |
-| 13 | `portfolio-review` | 7KB | 组合 | 仓位管理与优化 |
-| 14 | `management-deep-dive` | 10KB | 管理 | 管理层质量评估 |
-| 15 | `deep-company-series` | 9KB | 研究 | 系列深度公司研究 |
-| 16 | `dyp-ask` | 8KB | 研究 | 段永平视角问答 |
-| 17 | `wechat-article` | 10KB | 发布 | 研究成果→公众号文章 |
-
-### 2.2 industry-funnel（四层漏斗）详解
-
-```
-第一层：全市场扫描 → 30-60家
-  - 按行业/主题/指数/市场拉取候选
-  - A/B/C 入选类别（A=主业纯正，B=部分相关，C=观察）
-  - 关键自查：行业占比<30%标"非纯正"，中国/亚洲市场不能漏
-
-第二层：5条硬指标粗筛 → ≤10家
-  - PE合理 / ROE>15% / 现金流为正且占净利>70% / 负债率<60% / 护城河≥★★★
-  - 保留规则：5条全及格→保留，4条+1接近→标黄，<4条→淘汰
-
-第三层：精细分析 → ≤10家（每家300-500字）
-  - 商业模式一句话 / 财务质量 / 护城河深度 / 主要风险 / 估值快评
-  - 终选3家按"投资组合互补性"选（非打分排序）：
-    高确定低弹性（巴菲特型）+ 中等确定中等弹性（成长型）+ 高弹性高风险（期权型）
-
-第四层：四大师深度（每家800-1200字）
-  - 段永平视角：生意本质 + "本分"
-  - 巴菲特视角：五类护城河打分（★1-5）
-  - 芒格视角：前3失败路径 + 最坏情景估值
-  - 李录视角：文明级趋势定位 + 10-20年终局
+```text
+用户问题
+  -> Claude command / Codex skill
+  -> 单 Skill 或 Team Lead
+  -> 外部搜索、工具脚本、报告模板
+  -> reports/<公司或主题>/...
 ```
 
-### 2.3 quality-screen（7条去劣）详解
+团队型入口把任务拆成商业模式、财务估值、行业竞争、风险管理四个视角；`investment-research` 适合单公司完整研究，`investment-team` 适合并行协作。`earnings-team` 进一步增加编辑和读者评审，`thesis-tracker`/`thesis-drift` 将一次性研究变为持续核对。
 
-```python
-# 7条硬指标
-1. 10年平均ROE < 8%           → 排除
-2. 5年累计自由现金流为负        → 排除
-3. 利息覆盖倍数 < 2倍          → 排除
-4. 长期毛利率 < 15%            → 排除
-5. 经营现金流/净利润 < 0.7     → 排除
-6. 长期净利率 < 5%             → 排除
-7. 5年总股本膨胀 > 20%（非并购）→ 排除
+同步链由 `scripts/sync-codex-skills.py` 实现：读取 `skills/*.md` 的 front matter 和正文，补充 Codex 元数据与适配说明，写入 `codex-skills/<name>/SKILL.md`。安装脚本再把 Claude commands、Codex skills 或 prompts 放到客户端目录。该链路的关键不是文件复制，而是把提示词规则、工具路径和数据截止日期约束一起传播到不同 Agent 平台。
 
-# 3条豁免规则
-A. 战略投入期豁免（ROE不达标但收入增速>20%）
-B. 并购整合期豁免（短期负债率/股本膨胀）
-C. 股东回购豁免（股本缩减是好事）
-```
+## 3. 质量门与确定性工具
 
-**核心原则**：宁可漏网不可误杀。
+`tools/financial_rigor.py` 是无第三方依赖的 Python CLI，使用 `decimal.Decimal`，提供：
 
-### 2.4 bottleneck-hunter（供应链瓶颈）详解
+- `verify-market-cap`：股价 × 总股本与报告市值对比；
+- `verify-valuation`：PE、PB、ROE、FCF yield 等派生指标；
+- `cross-validate`：按容差比较多个来源；
+- `benford`：对数字首位分布做异常提示；
+- `calc` 与 `three-scenario`：精确表达式和三情景估值。
 
-**核心理念**：不问"AI推荐什么"，问"哪一环会先不够用？"
+`tools/report_audit.py` 将 Markdown 表格和正文中的金额、百分比、倍数提取成数据点，再按比例抽样并输出准出/打回所需的核验结果。它处理全角负号、表格负数、GBK 终端和异常绝对值，这些边界由 `tests/test_report_audit.py` 与 `tests/test_financial_rigor.py` 锁定。
 
-```
-趋势筛选（4条标准）：
-  - 持续性 ≥ 3-5年
-  - 物理性（需要实际硬件建设）
-  - 规模性（全球Capex > 500亿美元/年）
-  - 加速性（需求增速 > 供给扩产速度）
+其他工具按数据域拆分：`ashare_data.py`、`twstock_data.py`、`xueqiu_scraper.py` 负责数据获取，`stock_screener.py` 与 `momentum_backtest*.py` 负责筛选/回测，`morningstar_fair_value.py` 和 `star_history_chart.py` 提供补充数据与素材。它们依赖外部网络或本地凭据，不能把脚本成功运行误认为数据已被独立验证。
 
-层级穿透：
-  第一层（已定价）：GPU、HBM、电力
-  第二层（alpha）：光模块、激光器、InP衬底
-  第三层（深度alpha）：SOI晶圆、外延设备、IC载板
-```
+## 4. 报告结构与状态
 
-### 2.5 thesis-tracker（投资论文追踪）详解
+研究输出按公司目录、行业/主题根目录和组合文件分层。团队报告通常保留四个视角、综合报告和读者评审；长期跟踪使用 thesis 文件；财报、行业漏斗、公众号文章使用带日期的文件名。`CLAUDE.md` 要求事实、观点、估计和不确定项分开，关键财务数据至少两个独立来源交叉验证。
 
-```python
-# 模式A：建立论文
-investment_thesis = {
-    "买入理由": "...",        # 为什么买
-    "估值锚点": {pe_range, safety_margin},
-    "关键指标": [...],        # 每季度跟踪什么
-    "卖出条件": [             # 买入前就写好！
-        "基本面恶化（ROE连续2季<10%）",
-        "估值严重透支（PE>历史90%分位）",
-        " thesis 被证伪（核心逻辑变化）"
-    ]
-}
+该设计形成一个轻量状态机：研究问题 -> 筛选 -> 深研 -> 验算/审计 -> 发布 -> thesis 复核。状态主要存在 Markdown 文件和 Git 历史中，没有中心数据库，因此可审计、可迁移，但也容易出现命名漂移、报告与代码脱节和重复结论。
 
-# 模式B：追踪检查（每季度）
-for condition in sell_conditions:
-    if condition.triggered():
-        alert("卖出条件触发！")
-    else:
-        log("继续持有，thesis 完整")
-```
+## 5. 当前远端变更的结构影响
 
-### 2.6 earnings-team（财报精读团队）三阶段
+本次从旧本地基线切换到 `3de0ef252dc1` 后，结构变化不只是新增报告：
 
-```
-阶段一·研究（4大师并行精读）：
-  - 段永平：生意变好了还是变差了？
-  - 巴菲特：赚的是真钱还是假钱？
-  - 芒格：竞争格局在怎么变？
-  - 李录：有什么风险信号？
+- README 已明确为 **20 个 Skill**，新增/补齐 `income-investment`、`thesis-drift` 等入口，并增加与 Claude Code `/deep-research` 的协作说明；
+- `AGENTS.md`、`CONTRIBUTING.md`、`SECURITY.md` 和 Issue 模板补齐了双平台协作、质量门和项目治理；
+- `codex-skills/` 与 `codex-prompts/` 的生成/兼容边界更清楚，安装脚本成为跨客户端的正式入口；
+- 报告资产大量扩展到 AI 产业链、公司系列研究、财报复核和公众号发布，但这些报告属于证据资产，不能直接替代最新源码分析。
 
-阶段二·合成：
-  - Team Lead 综合四视角 → 研究报告初稿
+## 6. 可迁移模式与限制
 
-阶段三·发布：
-  - 编辑Agent → 改写公众号文章
-  - 读者评审Agent → 提修改意见
-  - Team Lead → 定稿
-```
+适合迁移的是“canonical workflow + 生成适配层”“确定性工具负责算术、模型负责解释”“发布前抽样审计”和“事实/观点/置信度分离”。迁移时应保留工具的输入输出协议和报告模板，而不是照搬四大师角色或具体估值阈值。
 
-### 2.7 news-pulse（异动归因）详解
+不应照搬的部分包括：依赖特定 Claude/Codex 客户端能力、把外部数据服务视为稳定接口、用 Markdown 目录代替高并发状态存储，以及把历史报告中的价格和收益数字当成当前事实。下一次同步应重点复核 Skill 数量、生成物一致性、工具 CLI 参数、报告命名和外部数据源可用性。
 
-```
-4个并行Agent侦察：
-  - Agent 1：公司事件（财报/管理层变动/产品发布）
-  - Agent 2：监管政策（行业政策/监管行动）
-  - Agent 3：行业对手（竞争对手动态）
-  - Agent 4：市场情绪（社交媒体/分析师评级）
+## 7. 验证范围
 
-输出：事件时间线 + 异动主因判断 + 是否触发论文重审
-```
-
----
-
-## 3. tools/ 质量验证工具
-
-### 3.1 financial_rigor.py（零外部依赖）
-
-```python
-# tools/financial_rigor.py — 使用 Decimal 精确运算，无浮点误差
-
-_CTX = Context(prec=28, rounding=ROUND_HALF_EVEN)
-
-def verify_market_cap(price, shares, reported_cap, currency):
-    """验算 市值 = 股价 × 总股本 vs 报告值"""
-    calculated = exact(price) * exact(shares)
-    deviation = abs(calculated - reported_cap) / reported_cap * 100
-    if deviation > 5%: return FAIL  # 股本/单位/股价问题
-    if deviation > 1%: return WARN
-
-def verify_valuation(price, eps, bvps, fcf_per_share, dividend):
-    """PE = price/eps, PB = price/bvps, ROE = eps/bvps"""
-    # 同时算盈利收益率、P/FCF、FCF Yield、股息率
-
-def cross_validate(field, values, unit):
-    """多源交叉验证：同一字段从年报/Yahoo/StockAnalysis取值，检查偏差"""
-
-def benford(values):
-    """本福特定律检验：数据是否被人为操纵"""
-```
-
-### 3.2 report_audit.py（报告抽检）
-
-```python
-# 三步工作流：
-# Step 1: extract — 从 Markdown 报告中正则提取所有数字（亿元/x/%/万亿/B/T）
-# Step 2: Claude 对抽检清单逐条从可靠信源取数
-# Step 3: verdict — 比对，15%偏差以上→打回
-
-_PATTERNS = [
-    (r'([\d,，\.]+)\s*%',        '%',    'percent'),
-    (r'([\d,，\.]+)\s*亿(元|美元|港元)?', '亿', 'hundred_million'),
-    (r'([\d,，\.]+)\s*[xX倍]',   'x',    'multiple'),
-    (r'([\d,，\.]+)\s*万亿',      '万亿', 'trillion'),
-]
-```
-
-### 3.3 其他工具
-
-| 工具 | 大小 | 功能 |
-|------|------|------|
-| `ashare_data.py` | 11KB | A股数据获取 |
-| `momentum_backtest.py` | 16KB | 动量回测 |
-| `momentum_backtest_v2.py` | 18KB | 动量回测 v2 |
-| `morningstar_fair_value.py` | 6KB | 晨星公允价值 |
-| `stock_screener.py` | 14KB | 股票筛选器 |
-| `xueqiu_scraper.py` | 17KB | 雪球数据抓取 |
-
----
-
-## 4. 信息可得性分级（A/B/C 评级）
-
-这是 ai-berkshire 最独特的设计之一——根据资料可得性调整分析深度。
-
-| 等级 | 特征 | 策略 |
-|------|------|------|
-| **A 级** | 完整财报原文 + 电话会纪要 | 正常执行全部步骤 |
-| **B 级** | 部分原文或第三方汇总 | 标注"非原始来源"，降低附注分析权重 |
-| **C 级** | 仅新闻摘要/数据网站 | 聚焦核心数据变化，跳过附注挖掘 |
-
-**为什么这么设计**：不同市场（A/H/U）、不同市值公司的信息可得性差异巨大。强行对C级做A级的深度分析只会产出幻觉。
-
----
-
-## 5. AGENTS.md 治理规则
-
-### 5.1 双平台兼容策略
-
-```
-skills/*.md           ← 唯一真源 (canonical)
-    ↓ sync-codex-skills.py
-codex-skills/*/SKILL.md  ← 自动生成（不手动编辑）
-    ↓ sync-codex-prompts.py
-codex-prompts/*.md     ← slash-command 兼容层
-```
-
-**规则**：修改 `skills/*.md` 后必须运行 `python3 scripts/sync-codex-skills.py`。
-
-### 5.2 研究质量规则
-
-- 财务数据必须来自至少**两个独立来源**
-- 使用 `financial_rigor.py` 做精确验算
-- 使用 `report_audit.py` 做发布前抽检
-- 低置信度结论必须标注
-
----
-
-## 6. 对当前项目的借鉴建议
-
-### HermesAlpha
-
-| 借鉴点 | 来源技能 | 实施 |
-|--------|---------|------|
-| 四大师评委 v2 | investment-research | 在现有评分系统上叠加段/巴/芒/李四视角 |
-| 信息可得性分级 | 所有技能 | A/B/C 评级影响 LLM 分析深度 |
-| report_audit 抽检 | report_audit.py | 报告发布前自动抽检 15% 数据点 |
-| Benford 检验 | financial_rigor.py | 检测数据源是否被操纵 |
-
-### ashare-audit
-
-| 借鉴点 | 来源技能 | 实施 |
-|--------|---------|------|
-| 7条去劣硬指标 | quality-screen | 筛选层第一道门 |
-| 四层漏斗 | industry-funnel | 从全市场到 3 家的标准化流程 |
-| cross_validate | financial_rigor.py | 多源交叉验证 |
+- 已基于 `3de0ef252dc1` 建立 codebase-memory 索引；索引显示主要源码是 Markdown，Python 代码集中在工具和两组测试。
+- 已核对 README、AGENTS/CLAUDE 指令、`skills/`、`codex-skills/`、`tools/`、`tests/`、`reports/` 和同步脚本。
+- 未执行需要外部行情、FinMind、雪球或大模型凭据的在线研究命令；相关运行结果仍待实际环境验证。

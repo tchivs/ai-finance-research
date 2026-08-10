@@ -1,7 +1,30 @@
 # vn.py（VeighNa）快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/vnpy/vnpy.git
+> 分析基线：
+> - `vnpy`：commit `fa5206fe63836f3f8cd1ebd7168fbd19a5e2ff09`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/vnpy`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `vnpy`：`1b78494979de` → `fa5206fe6383`
+
+提交摘要：
+- fa5206f [Mod] update README.md
+受影响路径：
+- `M	README.md`
+<!-- source-sync:changes:end -->
+
+
 > 原始仓库: <https://github.com/vnpy/vnpy>
-> 分析基线：`vnpy/vnpy` commit `1b78494979deb4c4996f6b864f234d9839f2f239`（2026-05-17），MIT，Python >= 3.10。本文只核对核心仓库；具体交易 Gateway、risk manager、paper account 等多为独立扩展包，需逐项固定版本和复核。
 
 ## 一句话定位
 

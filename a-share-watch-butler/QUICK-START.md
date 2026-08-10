@@ -1,7 +1,18 @@
 # a-share-watch-butler 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/nexaforgelab/a-share-watch-butler.git
+> 分析基线：
+> - `a-share-watch-butler`：commit `6d9076b164b1ac8a098b1baa0b9c2491b59d6910`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/a-share-watch-butler`
+<!-- source-sync:end -->
+
+
 > A 股 AI 盯盘管家 · 多 Agent 定时链路 · 数据诚实性 · 命中率反馈再校准
-> 源码: `/root/source/tmp/a-share-watch-butler/`
+> 源码: `src/a-share-watch-butler/`
 > 原始仓库: <https://github.com/nexaforgelab/a-share-watch-butler>
 
 ---

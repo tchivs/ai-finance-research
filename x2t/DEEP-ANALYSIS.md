@@ -1,7 +1,18 @@
 # x2t 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/actionow-ai/x2t.git
+> 分析基线：
+> - `x2t`：commit `f90487430f8d93fa245f81ac7b37a2014301e3b5`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/x2t`
+<!-- source-sync:end -->
+
+
 > 从财经噪声到可结算信号 · 信源战绩 · 立场账本 · 统计防幻觉
-> 源码: `/root/source/tmp/x2t/`
+> 源码: `src/x2t/`
 > 原始仓库: <https://github.com/actionow-ai/x2t>
 
 ---

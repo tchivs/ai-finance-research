@@ -1,7 +1,18 @@
 # Qlib 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/microsoft/qlib.git
+> 分析基线：
+> - `qlib`：commit `79633dd9506ea689e5400dea0197717b5b3d74b7`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/qlib`
+<!-- source-sync:end -->
+
+
 > 量化研究操作系统 · Task/Recorder/RecordTemp · Strategy/Executor/Decision · Nested execution
-> 源码: `/root/source/tmp/qlib/`
+> 源码: `src/qlib/`
 > 原始仓库: <https://github.com/microsoft/qlib>
 
 ## 1. 为什么 Qlib 重要

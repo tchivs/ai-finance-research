@@ -1,7 +1,18 @@
 # Quant Autoresearch 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/yllvar/Quant-Autoresearch.git
+> 分析基线：
+> - `Quant-Autoresearch`：commit `16636a87596c32600fdd088bb9ee5dacd491e1b2`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/Quant-Autoresearch`
+<!-- source-sync:end -->
+
+
 > OPENDEV terminal-agent architecture · long-horizon code evolution · truth engine · defense-in-depth
-> 源码: `/root/source/tmp/Quant-Autoresearch/`
+> 源码: `src/Quant-Autoresearch/`
 > 原始仓库: <https://github.com/yllvar/Quant-Autoresearch>
 
 ## 1. 架构总览

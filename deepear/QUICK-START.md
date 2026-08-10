@@ -1,7 +1,18 @@
 # DeepEar 快速概览
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/HKUSTDial/DeepEar.git
+> 分析基线：
+> - `DeepEar`：commit `579b7d418554f5da0a708e940b8df4d1ad035067`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/DeepEar`
+<!-- source-sync:end -->
+
+
 > 金融 Deep Research 与信号追踪框架 · 多 Agent · ISQ 信号质量评分 · 新闻感知 Kronos · 逻辑演化对比
-> 源码: `/root/source/tmp/DeepEar/`
+> 源码: `src/DeepEar/`
 > 原始仓库: <https://github.com/HKUSTDial/DeepEar>
 
 ---

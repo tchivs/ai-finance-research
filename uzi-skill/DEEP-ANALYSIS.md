@@ -1,7 +1,50 @@
 # UZI-Skill 终极深度逆向分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/wbh604/UZI-Skill
+> 分析基线：
+> - `UZI-Skill`：commit `0acf25122cabf493e7bc442faff62ceceb7f2f02`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/UZI-Skill`
+<!-- source-sync:end -->
+
+<!-- source-sync:changes:start -->
+## 本次源码同步复核
+
+> 以下内容由 Git 提交和变更路径生成，用于定位源码复核范围，不替代架构结论。
+
+### `UZI-Skill`：`fce996c33e70` → `0acf25122cab`
+
+提交摘要：
+- 0acf251 docs: bump 头部到 v3.9.4 并补更新日志 (kimi-k3)
+- 39e24ae fix: 前端显示修复 + 美化 (v3.9.4 · kimi-k3)
+- 9643965 chore: bump all manifests to v3.9.3
+- 76ecb87 docs: bump header to v3.9.3 and add full release notes
+- af04ceb fix: address Codex review on PR #98 (P1 fcf + P2 peers/viz)
+- cd4a135 Merge pull request #98 from wbh604/release/v3.9.3-fixes
+- 2594162 docs: add v3.9.3 changelog for Moutai-driven data/rendering fixes
+- d9e1e94 fix(viz): don't render "(None)" next to consensus target price
+受影响路径：
+- `M	.claude-plugin/plugin.json`
+- `M	.cursor-plugin/plugin.json`
+- `M	.env.example`
+- `M	AGENTS.md`
+- `M	CLAUDE.md`
+- `M	README.md`
+- `M	README_EN.md`
+- `M	RELEASE-NOTES.md`
+- `M	SKILL.md`
+- `M	docs/BUGS-LOG.md`
+- `A	docs/plans/2026-08-05-global-peer-comparison.md`
+- `M	gemini-extension.json`
+- 其余 38 个变更路径见 `.planning/source-sync.json`。
+<!-- source-sync:changes:end -->
+
+
 > 版本: v3.9.1 · 66 位评委 · 22 维数据 · A/H/U 三市场
-> 源码: `/root/source/tmp/UZI-Skill/skills/deep-analysis/scripts/`
+> 源码: `src/UZI-Skill/skills/deep-analysis/scripts/`
 > 原始仓库: <https://github.com/wbh604/UZI-Skill>
 
 ---

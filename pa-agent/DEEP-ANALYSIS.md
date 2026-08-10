@@ -1,7 +1,17 @@
 # PA_Agent 深度分析
 
+<!-- source-sync:start -->
+> 上游项目：
+> - https://github.com/rosemarycox5334-debug/PA_Agent.git
+> 分析基线：
+> - `PA_Agent`：commit `b1912e905800509e8f9cd50fb8589f4ef86ce21f`
+> 分析日期：2026-08-09
+> 本地源码目录：
+> - `src/PA_Agent`
+<!-- source-sync:end -->
+
+
 > 原始仓库: <https://github.com/rosemarycox5334-debug/PA_Agent>
-> 分析基线：`rosemarycox5334-debug/PA_Agent` commit `b1912e905800509e8f9cd50fb8589f4ef86ce21f`。本文为静态源码核对；未运行 `pytest`、未连接 MT5/TradingView/AkShare/LLM、未创建或批准 paper ticket，且不构成任何策略、执行或风控有效性结论。
 
 ## 1. 两阶段分析：将诊断与决策分开保存
 
