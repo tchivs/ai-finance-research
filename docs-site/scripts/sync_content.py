@@ -48,17 +48,28 @@ def first_heading(text: str, fallback: str) -> str:
     return fallback
 
 
+def summary_candidate(line: str) -> str:
+    value = line.strip()
+    if not value or value.startswith(("<!--", "#", "- ", ">", "```", "|")):
+        return ""
+    if value in {"提交摘要：", "受影响路径："} or value.endswith(("：", ":")):
+        return ""
+    value = re.sub(r"^\*\*(?:定位|产品定位)\*\*[:：]\s*", "", value)
+    return value.strip()
+
+
 def summary(text: str) -> str:
     lines = text.splitlines()
     for index, line in enumerate(lines):
-        if line.strip() in {"## 一句话定位", "## 产品定位"}:
+        heading = line.strip()
+        if heading.startswith("## ") and ("一句话定位" in heading or "产品定位" in heading):
             for candidate in lines[index + 1 : index + 8]:
-                value = candidate.strip()
-                if value and not value.startswith("<!--") and not value.startswith("#") and not value.startswith(">"):
+                value = summary_candidate(candidate)
+                if value:
                     return value[:180]
     for line in lines:
-        value = line.strip()
-        if value and not value.startswith("<!--") and not value.startswith(("- ", ">", "```")):
+        value = summary_candidate(line)
+        if value:
             return value[:180]
     return "可审计的源码研究与架构参考。"
 
